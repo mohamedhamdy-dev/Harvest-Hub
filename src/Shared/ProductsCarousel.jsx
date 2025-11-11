@@ -1,17 +1,18 @@
 import propTypes from "prop-types";
-import { SampleNextArrow, SamplePrevArrow } from "../ui/CarouselArrows";
 import ProductCard from "./ProductCard";
 import Slider from "react-slick";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function ProductsCarousel({ data }) {
   const settings = {
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     infinite: false,
     dots: false,
     draggable: false,
     speed: 500,
     rows: 2,
+
     slidesToShow: 4,
     responsive: [
       {
@@ -74,5 +75,36 @@ export default function ProductsCarousel({ data }) {
     </div>
   );
 }
+
+export function NextArrow(props) {
+  const { onClick } = props;
+  return (
+    <div
+      onClick={onClick}
+      className="absolute -right-16 top-1/2 z-10 w-fit -translate-y-1/2 cursor-pointer rounded-full bg-white p-2 duration-300 hover:bg-apple-500 hover:text-white lg:-right-10"
+    >
+      <FaChevronRight />
+    </div>
+  );
+}
+
+export function PrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <div
+      onClick={onClick}
+      className="absolute -left-16 top-1/2 z-10 w-fit -translate-y-1/2 cursor-pointer rounded-full bg-white p-2 duration-300 hover:bg-apple-500 hover:text-white lg:-left-10"
+    >
+      <FaChevronLeft />
+    </div>
+  );
+}
+
+PrevArrow.propTypes = {
+  onClick: propTypes.func,
+};
+NextArrow.propTypes = {
+  onClick: propTypes.func,
+};
 
 ProductsCarousel.propTypes = { data: propTypes.array };

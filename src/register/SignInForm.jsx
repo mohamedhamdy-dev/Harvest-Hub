@@ -10,8 +10,8 @@ import { auth } from "../firebase";
 export default function SignInForm({ className }) {
   const [showPassword, setShowPassword] = useState(false);
   const [userCredentials, setUserCredentials] = useState({
-    email: "",
-    password: "",
+    email: "admin@harvesthub.com",
+    password: "admin123",
   });
   const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
@@ -98,18 +98,6 @@ export default function SignInForm({ className }) {
         className="rounded-xl bg-apple-500 py-3 text-sm font-semibold uppercase text-white duration-300 hover:bg-black focus:bg-black active:translate-y-1"
       >
         sign in
-      </button>
-      <button
-        className="animate-pulse rounded-2xl bg-apple-500 py-2 text-white"
-        type="button"
-        onClick={() => {
-          setUserCredentials({
-            email: "admin@harvesthub.com",
-            password: "admin123",
-          });
-        }}
-      >
-        Fill Demo Credentials
       </button>
 
       <div>

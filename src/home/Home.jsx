@@ -1,10 +1,11 @@
 import BigPromo from "./BigPromo";
+import BlogPreview from "./BlogPreview";
 import CategoryCarousel from "./CategoryCarousel";
 import DealOfTheDay from "./DealOfTheDay";
 import FeaturePromo from "./FeaturePromo";
 import IntroCarousel from "./IntroCarousel";
 import NewsLetter from "./NewsLetter";
-import BlogPreview from "../blog/BlogPreview";
+
 import SpecialProducts from "./SpecialProducts";
 import Testimonial from "./Testimonial";
 

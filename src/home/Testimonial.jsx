@@ -2,7 +2,30 @@ import Slider from "react-slick";
 import propTypes from "prop-types";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { testimonialData } from "../assets/TestimonialStaticData";
+import { useTranslation } from "react-i18next";
+
+const testimonialData = [
+  {
+    image: `${import.meta.env.BASE_URL}testimonials/sample-1.jpg`,
+    name: "testmonial.t1.name",
+    role: "testmonial.t1.role",
+    feedback: "testmonial.t1.feedback",
+  },
+
+  {
+    image: `${import.meta.env.BASE_URL}testimonials/sample-2.jpg`,
+    name: "testmonial.t2.name",
+    role: "testmonial.t2.role",
+    feedback: "testmonial.t2.feedback",
+  },
+
+  {
+    image: `${import.meta.env.BASE_URL}testimonials/sample-3.jpg`,
+    name: "testmonial.t3.name",
+    role: "testmonial.t3.role",
+    feedback: "testmonial.t3.feedback",
+  },
+];
 
 function Testimonial() {
   var settings = {
@@ -30,16 +53,17 @@ function Testimonial() {
 export default Testimonial;
 
 function TestimonialItem({ data }) {
+  const { t } = useTranslation("home");
   const { image, name, role, feedback } = data;
 
   return (
     <div className="mx-auto flex flex-col items-center">
       <div className="overflow-hidden rounded-full">
-        <img src={image} alt={name} />
+        <img src={image} alt={t(name)} />
       </div>
-      <span className="mt-2 block text-lg capitalize">{name}</span>
-      <span className="mb-2 block text-sm capitalize">{role}</span>
-      <p className="text-balance text-center">{feedback}</p>
+      <span className="mt-2 block text-lg capitalize">{t(name)}</span>
+      <span className="mb-2 block text-sm capitalize">{t(role)}</span>
+      <p className="text-balance text-center">{t(feedback)}</p>
     </div>
   );
 }

@@ -2,14 +2,18 @@ import Slider from "react-slick";
 import propTypes from "prop-types";
 import AddToCartButton from "../shared/AddToCartButton";
 import { useEffect, useState } from "react";
-import { dealOfTheDayProducts } from "../assets/ProductStaticData";
+
 import { Rating } from "@material-tailwind/react";
 import { useDispatch } from "react-redux";
 import { addItem } from "../slices/cartSlice";
 import { Link } from "react-router-dom";
 import { H2 } from "../ui/Heading";
+import { useTranslation } from "react-i18next";
+import { dealOfTheDayProducts } from "../assets2/dealOfTheDay";
 
 function DealOfTheDay() {
+  const { t } = useTranslation("home");
+
   const settings = {
     infinite: false,
     dots: false,
@@ -31,7 +35,7 @@ function DealOfTheDay() {
 
   return (
     <div className="container mx-auto px-4 py-10">
-      <H2>deal of the day</H2>
+      <H2>{t("headings.dayDeal")}</H2>
 
       <div className="mx-auto max-w-[400px] md:max-w-none lg:max-w-[800px] xl:max-w-none">
         <Slider {...settings}>

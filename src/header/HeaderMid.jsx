@@ -65,7 +65,7 @@ function HeaderMid() {
             </svg>
           </div>
 
-          <div className="text-xs md:text-sm">
+          <div className="flex items-center justify-center text-xs md:text-sm ltr:flex-row rtl:flex-row-reverse">
             <span>
               {" "}
               {Number(totalCartPriceNumber) !== 0

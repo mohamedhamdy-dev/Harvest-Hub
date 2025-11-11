@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
-import propTypes from "prop-types";
-import { CountdownTimer } from "../shared/CountdownTimer";
-import { auctions } from "../assets/AuctionStaticData";
+// import { auctions } from "../assets/AuctionStaticData";
 import ReactPaginate from "react-paginate";
 import { useState } from "react";
 import { getActiveAuctions } from "../utils/helpers";
+import { combinedAuctionData } from "../assets2/auctionData";
+import AuctionCard from "./AuctionCard";
 
 export default function AuctionListingsPage() {
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 3;
 
-  const LiveAuctionsData = getActiveAuctions(auctions);
+  // const LiveAuctionsData = getActiveAuctions(combinedAuctionData);
+  const LiveAuctionsData = combinedAuctionData;
 
   const endOffset = itemOffset + itemsPerPage;
 
@@ -63,33 +63,3 @@ export default function AuctionListingsPage() {
     </>
   );
 }
-
-function AuctionCard({ data }) {
-  return (
-    <Link
-      key={data.id}
-      to={`/Harvest-Hub/auctions/${data.id}`}
-      className="flex flex-col items-center gap-2 rounded-xl border bg-white p-4 hover:shadow-xl md:flex-row lg:flex-col"
-    >
-      <div>
-        <img
-          src={data.image}
-          alt={data.title}
-          className="h-[320px] w-[320px] rounded object-cover"
-        />
-      </div>
-      <div>
-        <div>
-          <h2 className="line-clamp-1 text-lg font-semibold">{data.title}</h2>
-          <p>Current Bid: {data.currentBid}</p>
-        </div>
-        <div className="flex items-center gap-2">
-          <p className="">Time Left</p>
-          <CountdownTimer endTime={data.endTime} />
-        </div>
-      </div>
-    </Link>
-  );
-}
-
-AuctionCard.propTypes = { data: propTypes.object };

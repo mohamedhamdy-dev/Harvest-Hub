@@ -4,12 +4,12 @@ import ProductSpecifications from "./ProductSpecifications";
 import ProductReviews from "../reviews/ProductReviews";
 import RelatedProducts from "./RelatedProducts";
 import { useParams } from "react-router-dom";
-import {
-  cropAndFreshPDP,
-  dairyAndLivestockPDP,
-} from "../../assets/AgriDataPDP";
 
 import { splitCommonPrefix } from "../../utils/helpers";
+
+import { combinedCropAndFreshProducts } from "../../assets2/freshProduces";
+import { combinedDairyAndLivestockProducts } from "../../assets2/dairyLivestock";
+import { combinedSeedAndSaplingProducts } from "../../assets2/seedsSaplings";
 
 function fetchPDPData(id, type = "") {
   const match = id.match(/^[^-]+/);
@@ -17,11 +17,15 @@ function fetchPDPData(id, type = "") {
   switch (match[0]) {
     case "fruit":
     case "vege":
-      return cropAndFreshPDP.find((product) => product.id === id);
+      return combinedCropAndFreshProducts.find((product) => product.id === id);
     case "animal":
-      return dairyAndLivestockPDP.find((product) => product.id === id);
+      return combinedDairyAndLivestockProducts.find(
+        (product) => product.id === id,
+      );
     case "seed":
-      return cropAndFreshPDP.find((product) => product.id === id);
+      return combinedSeedAndSaplingProducts.find(
+        (product) => product.id === id,
+      );
   }
 }
 

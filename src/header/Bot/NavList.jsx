@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 export default function NavList({ setOpenNav, type }) {
   const { user } = useSelector((state) => state.auth);
   const { t } = useTranslation("header");
+  const role = user?.role;
 
   function handleClose() {
     if (type === "desktop") return;
@@ -25,9 +26,7 @@ export default function NavList({ setOpenNav, type }) {
             {t("bot.links.home")}
           </NavLink>
         </li>
-        {(user?.role === "merchant" ||
-          user?.role === "customer" ||
-          user?.role === "admin") && (
+        {(role === "merchant" || role === "customer" || role === "admin") && (
           <li>
             <NestedNavMenu
               handlerText={t("bot.links.store")}
@@ -36,7 +35,7 @@ export default function NavList({ setOpenNav, type }) {
           </li>
         )}
 
-        {user?.role === "admin" && (
+        {role === "admin" && (
           <li>
             <NavLink
               onClick={handleClose}
@@ -48,9 +47,7 @@ export default function NavList({ setOpenNav, type }) {
           </li>
         )}
 
-        {(user?.role === "merchant" ||
-          user?.role === "customer" ||
-          user?.role === "admin") && (
+        {(role === "merchant" || role === "customer" || role === "admin") && (
           <li>
             <NavLink
               onClick={handleClose}
@@ -62,9 +59,7 @@ export default function NavList({ setOpenNav, type }) {
           </li>
         )}
 
-        {(user?.role === "merchant" ||
-          user?.role === "customer" ||
-          user?.role === "admin") && (
+        {(role === "merchant" || role === "customer" || role === "admin") && (
           <li>
             <NavLink
               onClick={handleClose}
@@ -76,9 +71,7 @@ export default function NavList({ setOpenNav, type }) {
           </li>
         )}
 
-        {(user?.role === "merchant" ||
-          user?.role === "customer" ||
-          user?.role === "admin") && (
+        {(role === "merchant" || role === "customer" || role === "admin") && (
           <li>
             <NavLink
               onClick={handleClose}
@@ -89,7 +82,7 @@ export default function NavList({ setOpenNav, type }) {
             </NavLink>
           </li>
         )}
-        {user?.role === "admin" && (
+        {role === "admin" && (
           <li>
             <NavLink
               onClick={handleClose}
@@ -100,7 +93,7 @@ export default function NavList({ setOpenNav, type }) {
             </NavLink>
           </li>
         )}
-        {(user?.role === "merchant" || user?.role === "admin") && (
+        {(role === "merchant" || role === "admin") && (
           <li>
             <NavLink
               onClick={handleClose}

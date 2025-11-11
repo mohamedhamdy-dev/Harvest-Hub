@@ -108,37 +108,3 @@ input[type="checkbox"]:checked + label span:first-of-type {
 }
 
 /* //////////////////////////// */
-
-/*/////////////////////////////*/
-/*       React Slick Config    */
-/*/////////////////////////////*/
-
-/* 
-
-.intro-carousel .slick-track {
-  display: block;
-}
-
-.category-carousel .slick-track {
-  display: block;
-}
-
-.blog-review .slick-track {
-  display: block;
-}
-
-.slick-track::after,
-.slick-track::before {
-  display: none;
-}
-
-.deal-of-the-day .slick-track,
-{
-  display: flex;
-
-}
-
-.product-image-preview .slick-track {
-  display: flex;
-  gap: 1px;
-} */

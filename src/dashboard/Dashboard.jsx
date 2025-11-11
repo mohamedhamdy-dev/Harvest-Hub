@@ -30,7 +30,7 @@ export default function Dashboard({
   const LineKey2 = Object.keys(lineData[0])[1];
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div dir="ltr" className="grid grid-cols-3 gap-4">
       {/* Bar Chart */}
       <div className="col-span-3 row-start-1 rounded-2xl bg-white p-4 shadow-lg lg:col-span-2 lg:row-start-1">
         <h2 className="mb-2 text-xl font-semibold">{barTitle}</h2>

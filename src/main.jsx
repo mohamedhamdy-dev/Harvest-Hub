@@ -7,6 +7,8 @@ import "./i18n";
 import store from "./store.js";
 import { Provider } from "react-redux";
 
+import "./assets2/userAuctionData.js";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>

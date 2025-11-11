@@ -1,6 +1,5 @@
 import BreadCrumb from "../shared/BreadCrumb";
 import BlogAside from "./BlogAside";
-import { blogDetailsData } from "../assets/BlogStaticData";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import propTypes from "prop-types";
@@ -9,11 +8,12 @@ import {
   ChatBubbleLeftRightIcon,
   UserIcon,
 } from "@heroicons/react/24/outline";
+import { combinedBlogData } from "../assets2/blogData";
 
 function BlogView() {
   const { id } = useParams();
 
-  const blog = blogDetailsData.find((b) => Number(b.id) === Number(id));
+  const blog = combinedBlogData.find((b) => Number(b.id) === Number(id));
 
   const [comments, setComments] = useState([
     {

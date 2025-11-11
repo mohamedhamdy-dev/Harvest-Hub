@@ -2,6 +2,22 @@ import { createSlice } from "@reduxjs/toolkit";
 import { dummyUsers } from "../assets/dummyUsers";
 import { useSelector } from "react-redux";
 
+//  mock up initail State
+// const initialState = {
+//   uid: "iS3jNWLA4uU8vq0FCN5oceKGepj1",
+//   email: "admin@harvesthub.com",
+//   user: {
+//     name: "Mohamed",
+//     image: `${import.meta.env.BASE_URL}users/admin.jpg`,
+//     phone: "0100-888-4444",
+//     location: "Alexandria, Egypt",
+//     role: "admin",
+//     bio: "Tech enthusiast and platform manager. I keep Harvest Hub running smoothly and securely for everyone.",
+//   },
+//   token: "don't care just mockup",
+//   isAuthenticated: true,
+// };
+
 const initialState = {
   uid: null,
   email: null,

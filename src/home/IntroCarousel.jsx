@@ -2,18 +2,75 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import propTypes from "prop-types";
-
 import { Link } from "react-router-dom";
-import { introData } from "../assets/IntroStaticData";
+import { useTranslation } from "react-i18next";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+export const introData = [
+  {
+    id: 2,
+    promoTitle: "introCarousel.promo1.title",
+    textPosition: "left",
+    overlay: false,
+    promoDesc: "introCarousel.promo1.desc",
+    promoBanner: `${import.meta.env.BASE_URL}banners/banner-22.webp`,
+    promoLink: "link2",
+  },
+  {
+    id: 3,
+    promoTitle: "introCarousel.promo2.title",
+    textPosition: "left",
+    overlay: false,
+    promoDesc: "introCarousel.promo2.desc",
+    promoBanner: `${import.meta.env.BASE_URL}banners/banner-33.webp`,
+    promoLink: "link2",
+  },
+  {
+    id: 4,
+    promoTitle: "introCarousel.promo3.title",
+    textPosition: "center",
+    overlay: true,
+    promoDesc: "introCarousel.promo3.desc",
+    promoBanner: `${import.meta.env.BASE_URL}banners/banner-44.jpg`,
+    promoLink: "link2",
+  },
+  {
+    id: 5,
+    promoTitle: "introCarousel.promo4.title",
+    textPosition: "center",
+    overlay: true,
+    promoDesc: "introCarousel.promo4.desc",
+    promoBanner: `${import.meta.env.BASE_URL}banners/banner-55.png`,
+    promoLink: "link2",
+  },
+  {
+    id: 6,
+    promoTitle: "introCarousel.promo5.title",
+    textPosition: "left",
+    overlay: true,
+    promoDesc: "introCarousel.promo5.desc",
+    promoBanner: `${import.meta.env.BASE_URL}banners/banner-66.jpg`,
+    promoLink: "link2",
+  },
+  {
+    id: 7,
+    promoTitle: "introCarousel.promo6.title",
+    textPosition: "left",
+    overlay: true,
+    promoDesc: "introCarousel.promo6.desc",
+    promoBanner: `${import.meta.env.BASE_URL}banners/banner-77.jpg`,
+    promoLink: "link2",
+  },
+];
 
 export default function IntroCarousel() {
   var settings = {
     dots: true,
     infinite: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     dotsClass: "slick-dots  bottom-[0] ",
-    className: "intro-carousel",
     customPaging: () => (
       <div className="active-helper size-2 rounded-full bg-apple-500 opacity-50"></div>
     ),
@@ -47,29 +104,9 @@ export default function IntroCarousel() {
   );
 }
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} right-5 z-10 size-10 rounded-full bg-apple-500 opacity-100 duration-300 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-base before:content-['⟩'] hover:bg-black`}
-      style={{ ...style }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} left-5 z-10 size-10 rounded-full bg-apple-500 opacity-100 duration-300 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-base before:content-['⟨'] hover:bg-black`}
-      style={{ ...style }}
-      onClick={onClick}
-    />
-  );
-}
-
 function IntroItem({ data }) {
+  const { t } = useTranslation("home");
+
   const {
     promoTitle,
     promoDesc,
@@ -88,7 +125,7 @@ function IntroItem({ data }) {
     <article className="relative">
       <img
         src={promoBanner}
-        alt={promoTitle}
+        alt={t(promoTitle)}
         className="min-h-52 w-full md:h-[315px] lg:h-[415px] xl:h-[475px] 2xl:h-[800px]"
       ></img>
 
@@ -98,12 +135,12 @@ function IntroItem({ data }) {
         <p
           className={` ${overlay ? "text-gray-200" : "text-black"} my-1 sm:text-lg md:text-xl lg:mt-3 lg:text-3xl xl:text-4xl 2xl:mt-6 2xl:text-5xl`}
         >
-          {promoTitle}
+          {t(promoTitle)}
         </p>
         <p
           className={`text-[10px] ${overlay ? "text-gray-400" : "text-gray-600"} w-48 text-xs sm:w-72 md:text-base lg:w-96 lg:text-xl xl:w-[480px] xl:text-2xl 2xl:w-auto 2xl:max-w-[700px] 2xl:text-3xl`}
         >
-          {promoDesc}
+          {t(promoDesc)}
         </p>
         <Link
           to={promoLink}
@@ -116,18 +153,39 @@ function IntroItem({ data }) {
   );
 }
 
+export function NextArrow(props) {
+  const { onClick } = props;
+  return (
+    <div
+      onClick={onClick}
+      className="absolute right-5 top-1/2 z-10 w-fit -translate-y-1/2 cursor-pointer rounded-full bg-apple-500 p-2 text-white duration-300 hover:bg-black"
+    >
+      <FaChevronRight />
+    </div>
+  );
+}
+
+export function PrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <div
+      onClick={onClick}
+      className="absolute left-5 top-1/2 z-10 w-fit -translate-y-1/2 cursor-pointer rounded-full bg-apple-500 p-2 text-white duration-300 hover:bg-black"
+    >
+      <FaChevronLeft />
+    </div>
+  );
+}
+
 //////////////////////////////////
 
-SamplePrevArrow.propTypes = {
-  className: propTypes.string,
-  style: propTypes.object,
-  onClick: propTypes.func,
-};
-SampleNextArrow.propTypes = {
-  className: propTypes.string,
-  style: propTypes.object,
-  onClick: propTypes.func,
-};
 IntroItem.propTypes = {
   data: propTypes.object,
+};
+
+PrevArrow.propTypes = {
+  onClick: propTypes.func,
+};
+NextArrow.propTypes = {
+  onClick: propTypes.func,
 };

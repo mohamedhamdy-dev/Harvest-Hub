@@ -7,35 +7,44 @@ import {
   MenuHandler,
 } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import { asideData } from "../assets/BlogStaticData";
+import { combinedBlogData } from "../assets2/blogData";
+import { Link } from "react-router-dom";
 
 export default function BlogAside() {
   return (
     <>
       <div className="hidden basis-1/4 flex-col gap-4 xl:flex 2xl:basis-1/5">
-        {asideData.map((el, key) => (
-          <BlogAsideSection data={el} key={key} />
-        ))}
+        <BlogAsideSection
+          data={combinedBlogData.slice(5, 7)}
+          sectionTitle="Popular Articles"
+        />
+        <BlogAsideSection
+          data={combinedBlogData.slice(1, 3)}
+          sectionTitle="Recent Articles"
+        />
       </div>
       <div className="flex flex-col gap-4 xl:hidden">
-        {asideData.map((el, key) => (
-          <MobileDropDown data={el} key={key} />
-        ))}
+        <BlogAsideSection
+          data={combinedBlogData.slice(0, 2)}
+          sectionTitle="Popular Articles"
+        />
+        <BlogAsideSection
+          data={combinedBlogData.slice(3, 5)}
+          sectionTitle="Recent Articles"
+        />
       </div>
     </>
   );
 }
 
-function BlogAsideSection({ data }) {
-  const { sectionTitle, sectionItems } = data;
-
+function BlogAsideSection({ data, sectionTitle }) {
   return (
     <div className="overflow-hidden rounded-2xl border-[1px] border-gray-300 bg-white">
       <h2 className="border-b-[1px] border-gray-300 px-4 py-3 capitalize">
         {sectionTitle}
       </h2>
       <ul className="flex flex-col gap-3 p-4">
-        {sectionItems.map((el, key) => (
+        {data.map((el, key) => (
           <BlogAsideSectionItem data={el} key={key} />
         ))}
       </ul>
@@ -44,18 +53,19 @@ function BlogAsideSection({ data }) {
 }
 
 function BlogAsideSectionItem({ data, dropdown }) {
-  const { itemImage, itemTitle, itemDate, itemLink } = data;
+  const { id, blogImage, blogHeading, blogDate } = data;
+
   return (
     <li className={`flex ${dropdown ? "first:pt-3 last:pb-3" : ""}`}>
-      <img src={itemImage} alt="post image" className="size-16 rounded-2xl" />
+      <img src={blogImage} alt="post image" className="size-16 rounded-2xl" />
       <div className="ml-3">
-        <a
-          href={itemLink}
-          className="block cursor-pointer text-sm text-gray-900 hover:text-apple-500"
+        <Link
+          to={`/blog-view/${id}`}
+          className="line-clamp-1 cursor-pointer text-sm text-gray-900 hover:text-apple-500"
         >
-          {itemTitle}
-        </a>
-        <span className="block text-sm">{itemDate}</span>
+          {blogHeading}
+        </Link>
+        <p className="mt-1 text-sm">{blogDate}</p>
       </div>
     </li>
   );
@@ -106,7 +116,8 @@ BlogAsideSectionItem.propTypes = {
   dropdown: propTypes.bool,
 };
 BlogAsideSection.propTypes = {
-  data: propTypes.object,
+  data: propTypes.array,
+  sectionTitle: propTypes.string,
 };
 MobileDropDown.propTypes = {
   data: propTypes.object,

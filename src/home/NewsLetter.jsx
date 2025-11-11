@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 function NewsLetter() {
+  const { t } = useTranslation("home");
+
   return (
     <div className="bg-[url(/newsletter/newsletter-bg.jpg)]">
       <div className="block pb-24 pt-5 lg:container lg:mx-auto lg:flex lg:items-center lg:pb-72 lg:pt-12">
@@ -9,11 +13,9 @@ function NewsLetter() {
           </div>
           <div className="mb-2 text-center text-white lg:text-start">
             <h3 className="text-base font-bold lg:text-2xl">
-              Sign Up To Newsletter
+              {t("newsLetter.title")}
             </h3>
-            <p className="text-xs lg:text-base">
-              stay up to date with new collections and exclusive offers.
-            </p>
+            <p className="text-xs lg:text-base">{t("newsLetter.desc")}</p>
           </div>
         </div>
         {/* form  */}
@@ -22,11 +24,11 @@ function NewsLetter() {
             <input
               type="text"
               name="email"
-              placeholder="Your Email Address"
+              placeholder={t("newsLetter.placeholder")}
               className="w-[70%] rounded-s-full px-6 py-2 text-sm outline-none lg:py-3"
             />
             <button className="rounded-e-full bg-apple-500 px-2 py-2 pe-3 text-sm uppercase text-white duration-300 hover:bg-black lg:py-3">
-              subscribe
+              {t("newsLetter.action")}
             </button>
           </form>
         </div>

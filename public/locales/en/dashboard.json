@@ -1,0 +1,7 @@
+{
+  "nav": {
+    "prod": "Products Dashboard",
+    "equip": "Equipments Dashboard",
+    "supp": "Supplies Dashboard"
+  }
+}

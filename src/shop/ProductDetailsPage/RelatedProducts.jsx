@@ -1,10 +1,8 @@
-import {
-  cropAndFreshProducesData,
-  dairyAndLivestockProducts,
-  seedAndSaplingProducts,
-} from "../../assets/AgriDataPLP";
 import { H2 } from "../../ui/Heading";
 import ProductsCarousel from "../../shared/ProductsCarousel";
+import { combinedCropAndFreshProducts } from "../../assets2/freshProduces";
+import { combinedDairyAndLivestockProducts } from "../../assets2/dairyLivestock";
+import { combinedSeedAndSaplingProducts } from "../../assets2/seedsSaplings";
 
 export default function RelatedProducts() {
   return (
@@ -14,9 +12,9 @@ export default function RelatedProducts() {
 
         <ProductsCarousel
           data={[
-            ...cropAndFreshProducesData,
-            ...dairyAndLivestockProducts,
-            ...seedAndSaplingProducts,
+            ...combinedCropAndFreshProducts,
+            ...combinedDairyAndLivestockProducts,
+            ...combinedSeedAndSaplingProducts,
           ]}
         />
       </div>

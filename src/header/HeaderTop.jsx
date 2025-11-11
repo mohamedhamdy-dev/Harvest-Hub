@@ -12,6 +12,7 @@ function HeaderTop() {
 
   function changeLanguage(lng) {
     i18next.changeLanguage(lng);
+
     document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
   }
 

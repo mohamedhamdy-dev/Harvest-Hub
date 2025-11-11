@@ -1,10 +1,6 @@
 import { MdOutlineAddToPhotos } from "react-icons/md";
 import ReactPaginate from "react-paginate";
-import {
-  cropAndFreshProducesData,
-  dairyAndLivestockProducts,
-  seedAndSaplingProducts,
-} from "../assets/AgriDataPLP";
+
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import propTypes from "prop-types";
@@ -13,12 +9,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ImageUploader } from "../shared/ImageUploader";
 import { AiOutlineProduct } from "react-icons/ai";
+import { combinedCropAndFreshProducts } from "../assets2/freshProduces";
+import { combinedDairyAndLivestockProducts } from "../assets2/dairyLivestock";
+import { combinedSeedAndSaplingProducts } from "../assets2/seedsSaplings";
 
 function fetchData(id) {
   return [
-    ...cropAndFreshProducesData,
-    ...dairyAndLivestockProducts,
-    ...seedAndSaplingProducts,
+    ...combinedCropAndFreshProducts,
+    ...combinedDairyAndLivestockProducts,
+    ...combinedSeedAndSaplingProducts,
   ];
 }
 
@@ -132,9 +131,9 @@ function SearchBox({ placeholder = "Search...", onSearch }) {
   const [showSuggestions, setShowSuggestions] = useState(false);
 
   const allProducts = [
-    ...cropAndFreshProducesData,
-    ...dairyAndLivestockProducts,
-    ...seedAndSaplingProducts,
+    ...combinedCropAndFreshProducts,
+    ...combinedSeedAndSaplingProducts,
+    ...combinedDairyAndLivestockProducts,
   ];
 
   useEffect(() => {

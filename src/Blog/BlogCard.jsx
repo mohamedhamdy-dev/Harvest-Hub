@@ -4,6 +4,7 @@ import {
   ChatBubbleLeftRightIcon,
 } from "@heroicons/react/24/solid";
 import propTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export default function BlogCard({ data }) {
   const {
@@ -19,7 +20,7 @@ export default function BlogCard({ data }) {
   return (
     <article className="h-fit overflow-hidden rounded-2xl bg-white">
       <div className="">
-        <img src={blogImage} alt="blog image" className="w-full" />
+        <img src={blogImage} alt={blogHeading} className="w-full" />
       </div>
       <div className="p-7 py-5 pb-0">
         <BlogCardReview
@@ -28,20 +29,20 @@ export default function BlogCard({ data }) {
           blogReviews={blogReviews}
         />
         <div className="border-b-[1px] border-gray-300 py-4">
-          <a
-            href={`./blog-view/${id}`}
+          <Link
+            to={`/blog-view/${id}`}
             className="mb-2 line-clamp-1 cursor-pointer text-lg text-gray-900 hover:text-apple-500"
           >
             {blogHeading}
-          </a>
+          </Link>
           <p className="line-clamp-3 text-gray-600">{blogDesc}</p>
         </div>
-        <a
+        <Link
           className="block w-fit cursor-pointer py-4 text-gray-900 hover:text-apple-500"
-          href={`./blog-view/${id}`}
+          to={`/blog-view/${id}`}
         >
           Read More
-        </a>
+        </Link>
       </div>
     </article>
   );

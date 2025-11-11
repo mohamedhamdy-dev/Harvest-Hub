@@ -1,1 +1,87 @@
-{}
+{
+  "introCarousel": {
+    "promo1": {
+      "title": "Farm-Fresh Goodness",
+      "desc": "Crisp, nutritious veggies, straight from local farms to your table."
+    },
+    "promo2": {
+      "title": "Nature’s Sweetest Bounty",
+      "desc": "Savor the juiciest, ripest fruits straight from the orchards to your table."
+    },
+    "promo3": {
+      "title": "Innovate Your Farm",
+      "desc": "Get the latest farming tools and smart tech to boost productivity and efficiency."
+    },
+    "promo4": {
+      "title": "Harvest More, Waste Less",
+      "desc": "Optimize your yields and reduce waste with our smart agricultural solutions."
+    },
+    "promo5": {
+      "title": "Stronger Farms, Better Harvests",
+      "desc": "Providing the tools and resources farmers need to thrive."
+    },
+    "promo6": {
+      "title": "Farming for the Future",
+      "desc": "Empowering farmers with sustainable practices for a greener tomorrow."
+    }
+  },
+  "categoryCarousel": {
+    "produces": "Fruit & Veges",
+    "livestock": "Dairy & Livestock",
+    "farmTech": "Farm Technology",
+    "seeds": "Seeds & Saplings"
+  },
+
+  "bigPromo": {
+    "title": "Save 20% on Fresh Picks!",
+    "desc": "Get farm-fresh fruits and veggies at unbeatable prices—limited time only!",
+    "action": "shop now"
+  },
+
+  "featurePromo": {
+    "feature1": {
+      "title": "Marketplace",
+      "desc": "Buy, sell, or rent farming Needs"
+    },
+    "feature2": { "title": "24/7 Online Support", "desc": "Contact us 24/7" },
+    "feature3": {
+      "title": "Real-Time Insights",
+      "desc": "crop analytics, and market trends for smarter farming decisions."
+    },
+    "feature4": {
+      "title": "Special Gift Cards",
+      "desc": "offer special bonuses with gifts"
+    }
+  },
+
+  "newsLetter": {
+    "title": "Sign Up To Newsletter",
+    "desc": "stay up to date with new collections and exclusive offers.",
+    "placeholder": "Your Email Address",
+    "action": "subscribe"
+  },
+
+  "testmonial": {
+    "t1": {
+      "name": "sandra",
+      "role": "customer",
+      "feedback": "The best place for farm supplies Everything I needed was easy to find, and delivery was super fast. Highly recommended"
+    },
+    "t2": {
+      "name": "scarlet",
+      "role": "engineer",
+      "feedback": "Harvest Hub provides top-tier farming solutions. Their equipment is reliable, and their supplies ensure efficiency in large-scale farming operations."
+    },
+    "t3": {
+      "name": "mai",
+      "role": "farmer",
+      "feedback": "Reliable supplies, fast delivery, and excellent customer support. Harvest Hub is now my go-to for all farming needs."
+    }
+  },
+
+  "headings": {
+    "special": "Special Products",
+    "dayDeal": "Deal of The Day",
+    "fromBlog": "From Our Blog"
+  }
+}

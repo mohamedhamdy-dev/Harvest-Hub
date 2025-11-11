@@ -2,9 +2,10 @@ export const combinedSeedAndSaplingProducts = [
   {
     id: "seed-01",
     productName: "Burpee Sweet Pepper Seeds",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/SeedsAndSaplings/burpeeSweetPepperSeeds.webp`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898811/burpeeSweetPepperSeeds_cnugxd.webp",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/SeedsAndSaplings/burpeeSweetPepperSeeds.webp`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898811/burpeeSweetPepperSeeds_cnugxd.webp",
     ],
     description:
       "High-quality sweet pepper seeds from Burpee, perfect for home gardening. Produces vibrant, sweet peppers ideal for salads and cooking. Easy to grow with high germination rates.",
@@ -43,9 +44,10 @@ export const combinedSeedAndSaplingProducts = [
   {
     id: "seed-02",
     productName: "Burpee Carrot Seeds",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/SeedsAndSaplings/burpeeCarrotSeeds.webp`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898812/burpeeCarrotSeeds_c4ufec.webp",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/SeedsAndSaplings/burpeeCarrotSeeds.webp`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898812/burpeeCarrotSeeds_c4ufec.webp",
     ],
     description:
       "Premium carrot seeds that produce crisp, sweet carrots perfect for fresh eating or cooking. These Nantes-type carrots grow straight and uniform with excellent flavor.",
@@ -85,9 +87,10 @@ export const combinedSeedAndSaplingProducts = [
   {
     id: "seed-03",
     productName: "Burpee Pea Seeds",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/SeedsAndSaplings/burpeePeaSeeds.webp`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898810/burpeePeaSeeds_kpstxp.webp",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/SeedsAndSaplings/burpeePeaSeeds.webp`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898810/burpeePeaSeeds_kpstxp.webp",
     ],
     description:
       "Delicious pea seeds that produce abundant yields of sweet, tender peas. Perfect for spring planting, these peas are great for fresh eating, freezing, or canning.",
@@ -127,9 +130,10 @@ export const combinedSeedAndSaplingProducts = [
   {
     id: "seed-04",
     productName: "Burpee Watermelon Seeds",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/SeedsAndSaplings/burpeeWatermelonSeeds.webp`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898812/burpeeWatermelonSeeds_w2n6dk.webp",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/SeedsAndSaplings/burpeeWatermelonSeeds.webp`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898812/burpeeWatermelonSeeds_w2n6dk.webp",
     ],
     description:
       "Sweet, juicy watermelon seeds that produce large, refreshing melons perfect for summer. These seeds grow into vigorous vines that yield 8-10 kg fruits with deep red, sweet flesh.",
@@ -170,9 +174,10 @@ export const combinedSeedAndSaplingProducts = [
   {
     id: "seed-05",
     productName: "Ferry Morse Tomato Seeds",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/SeedsAndSaplings/ferryTomatoSeeds.webp`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898812/ferryTomatoSeeds_cuzvs2.webp",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/SeedsAndSaplings/ferryTomatoSeeds.webp`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898812/ferryTomatoSeeds_cuzvs2.webp",
     ],
     description:
       "Reliable tomato seeds from Ferry Morse that produce robust plants with abundant, flavorful tomatoes. Perfect for slicing, salads, and cooking with consistent results.",
@@ -213,9 +218,10 @@ export const combinedSeedAndSaplingProducts = [
   {
     id: "seed-06",
     productName: "Tomato Sow Right Seeds",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/SeedsAndSaplings/tomatoSowRightSeeds.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898813/tomatoSowRightSeeds_ggk43t.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/SeedsAndSaplings/tomatoSowRightSeeds.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898813/tomatoSowRightSeeds_ggk43t.jpg",
     ],
     description:
       "Healthy, established tomato saplings ready for transplanting. These vigorous starter plants give you a head start on the growing season and ensure earlier harvests of delicious tomatoes.",

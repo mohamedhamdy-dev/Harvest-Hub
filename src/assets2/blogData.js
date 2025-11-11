@@ -1,7 +1,8 @@
 export const combinedBlogData = [
   {
     id: 1,
-    blogImage: `${import.meta.env.BASE_URL}blogs/blogDetails/blog1.jpg`,
+    blogImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898958/blog4_ghxddg.jpg",
     blogAuthor: "Sarah Greenfield",
     blogDate: "01/10/2025",
     blogComments: 48,
@@ -30,7 +31,8 @@ export const combinedBlogData = [
   },
   {
     id: 2,
-    blogImage: `${import.meta.env.BASE_URL}blogs/blogDetails/blog2.jpg`,
+    blogImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898957/blog3_rbobzv.jpg",
     blogAuthor: "Ahmed Farouk",
     blogDate: "03/22/2025",
     blogComments: 76,
@@ -66,7 +68,8 @@ export const combinedBlogData = [
   },
   {
     id: 3,
-    blogImage: `${import.meta.env.BASE_URL}blogs/blogDetails/blog3.jpg`,
+    blogImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898955/blog1_qjrsxr.jpg",
     blogAuthor: "Emily Waters",
     blogDate: "04/08/2025",
     blogComments: 31,
@@ -88,7 +91,8 @@ export const combinedBlogData = [
   },
   {
     id: 4,
-    blogImage: `${import.meta.env.BASE_URL}blogs/blogDetails/blog4.jpg`,
+    blogImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898953/blog2_sdkskk.jpg",
     blogAuthor: "Dr. Tarek Hossam",
     blogDate: "06/15/2025",
     blogComments: 90,
@@ -117,7 +121,8 @@ export const combinedBlogData = [
   },
   {
     id: 5,
-    blogImage: `${import.meta.env.BASE_URL}blogs/blogDetails/blog1.jpg`,
+    blogImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898957/blog3_rbobzv.jpg",
     blogAuthor: "Layla Morgan",
     blogDate: "02/14/2025",
     blogComments: 62,
@@ -152,7 +157,8 @@ export const combinedBlogData = [
   },
   {
     id: 6,
-    blogImage: `${import.meta.env.BASE_URL}blogs/blogDetails/blog3.jpg`,
+    blogImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898953/blog2_sdkskk.jpg",
     blogAuthor: "Omar El Saeed",
     blogDate: "06/21/2025",
     blogComments: 39,
@@ -180,7 +186,8 @@ export const combinedBlogData = [
   },
   {
     id: 7,
-    blogImage: `${import.meta.env.BASE_URL}blogs/blogDetails/blog4.jpg`,
+    blogImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898958/blog4_ghxddg.jpg",
     blogAuthor: "Lina El Araby",
     blogDate: "06/10/2025",
     blogComments: 26,

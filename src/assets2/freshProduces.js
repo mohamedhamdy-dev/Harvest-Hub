@@ -2,9 +2,9 @@ export const combinedCropAndFreshProducts = [
   {
     id: "fruit-01",
     productName: "Organic Gala Apples",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/redApple.jpg`,
+    productImage: `https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898804/redApple_j5xzzs.jpg`,
     images: [
-      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762785825/redApple_vq2bdr.jpg",
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898804/redApple_j5xzzs.jpg",
     ],
     description:
       "Freshly picked organic Gala apples, rich in flavor and nutrients. Ideal for snacking or baking.",
@@ -37,9 +37,10 @@ export const combinedCropAndFreshProducts = [
   {
     id: "fruit-02",
     productName: "Bananas",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/bananas.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898799/bananas_mdzrmj.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/bananas.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898799/bananas_mdzrmj.jpg",
     ],
     description:
       "Naturally sweet and full of potassium, our bananas are ideal for a healthy snack or smoothie.",
@@ -72,9 +73,10 @@ export const combinedCropAndFreshProducts = [
   {
     id: "fruit-03",
     productName: "Grapes",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/grapes.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898800/grapes_w6vzfv.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/grapes.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898800/grapes_w6vzfv.jpg",
     ],
     description:
       "Sweet and juicy grapes perfect for snacking or making juice. Grown without synthetic pesticides.",
@@ -107,9 +109,10 @@ export const combinedCropAndFreshProducts = [
   {
     id: "fruit-04",
     productName: "Green Apples",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/greenApple.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898801/greenApple_dlbpmn.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/greenApple.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898801/greenApple_dlbpmn.jpg",
     ],
     description:
       "Tangy and crisp green apples, perfect for juicing or baking pies.",
@@ -142,9 +145,10 @@ export const combinedCropAndFreshProducts = [
   {
     id: "fruit-05",
     productName: "Pears",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/pears.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898802/pears_wcnyas.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/pears.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898802/pears_wcnyas.jpg",
     ],
     description:
       "Juicy and mellow pears perfect for snacking and desserts. Rich in fiber and vitamin C.",
@@ -177,9 +181,10 @@ export const combinedCropAndFreshProducts = [
   {
     id: "fruit-06",
     productName: "Fig",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/fig.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898800/fig_ekvuzw.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/fig.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898800/fig_ekvuzw.jpg",
     ],
     description:
       "Sweet seasonal figs loaded with antioxidants and dietary fiber.",
@@ -212,9 +217,10 @@ export const combinedCropAndFreshProducts = [
   {
     id: "fruit-07",
     productName: "Strawberry",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/strawberry.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898804/strawberry_hqfjxv.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/strawberry.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898804/strawberry_hqfjxv.jpg",
     ],
     description:
       "*Note: Product image is strawberry. Verify name.* Likely to be fresh strawberries – juicy and sweet.",
@@ -239,9 +245,11 @@ export const combinedCropAndFreshProducts = [
   {
     id: "vege-01",
     productName: "Tomato",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/tomato1.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898805/tomato2_fgut5a.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/tomato1.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898805/tomato2_fgut5a.jpg",
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898806/tomato1_ufdejw.jpg",
     ],
     description:
       "Juicy and ripe tomatoes perfect for salads, sauces, and everyday cooking.",
@@ -274,9 +282,11 @@ export const combinedCropAndFreshProducts = [
   {
     id: "vege-02",
     productName: "onion",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/onion1.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898802/onion2_irqt4a.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/onion1.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898802/onion2_irqt4a.jpg",
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898802/onion1_p1vdrw.jpg",
     ],
     description:
       "Aromatic and versatile onions great for cooking and garnishing.",
@@ -313,9 +323,11 @@ export const combinedCropAndFreshProducts = [
   {
     id: "vege-03",
     productName: "Potato",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/potato1.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898804/potato1_pbr1vb.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/potato1.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898804/potato2_jadzed.jpg",
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898804/potato1_pbr1vb.jpg",
     ],
     description: "Staple food with a rich source of carbohydrates and fiber.",
     specs: { origin: "Upper Egypt", type: "Spunta", shelfLife: "25 days" },
@@ -347,9 +359,11 @@ export const combinedCropAndFreshProducts = [
   {
     id: "vege-04",
     productName: "Carrot",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/carrot1.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898800/carrot1_a5xu0f.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/carrot1.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898800/carrot2_otrtyc.jpg",
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898800/carrot1_a5xu0f.jpg",
     ],
     description: "Crunchy, sweet carrots full of vitamins and antioxidants.",
     specs: { origin: "Ismailia", type: "Nantes", shelfLife: "14 days" },
@@ -381,9 +395,10 @@ export const combinedCropAndFreshProducts = [
   {
     id: "vege-05",
     productName: "Cucumbers",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/cucumbers.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898801/cucumbers_faxpd2.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/cucumbers.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898801/cucumbers_faxpd2.jpg",
     ],
     description: "Fresh and crisp cucumbers ideal for salads and hydration.",
     specs: { origin: "Local Farms", size: "Medium", freshness: "High" },
@@ -423,9 +438,10 @@ export const combinedCropAndFreshProducts = [
   {
     id: "vege-06",
     productName: "Cauliflower",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/cauliflower.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898800/cauliflower_humszz.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/cauliflower.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898800/cauliflower_humszz.jpg",
     ],
     description:
       "Nutritious and versatile white cauliflower, great for roasting or steaming.",
@@ -466,9 +482,10 @@ export const combinedCropAndFreshProducts = [
   {
     id: "vege-07",
     productName: "Corn",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/corn.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898801/corn_xlsjhj.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/corn.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898801/corn_xlsjhj.jpg",
     ],
     description:
       "Golden yellow corn, sweet and juicy – perfect for grilling or boiling.",
@@ -509,9 +526,10 @@ export const combinedCropAndFreshProducts = [
   {
     id: "vege-08",
     productName: "Chili Peppers",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/chiliPeppers.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898801/chiliPeppers_obd7ap.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/chiliPeppers.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898801/chiliPeppers_obd7ap.jpg",
     ],
     description: "Spicy red chili peppers for cooking and pickling.",
     specs: { spiceLevel: "High", color: "Red", shelfLife: "5 days" },
@@ -551,9 +569,10 @@ export const combinedCropAndFreshProducts = [
   {
     id: "vege-09",
     productName: "Lemon",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/lemon.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898802/lemon_hqt3pt.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/lemon.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898802/lemon_hqt3pt.jpg",
     ],
     description:
       "Fresh yellow lemons rich in vitamin C, perfect for seasoning and beverages.",
@@ -594,9 +613,10 @@ export const combinedCropAndFreshProducts = [
   {
     id: "vege-10",
     productName: "Peas",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/peas.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898802/peas_ncepr5.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/peas.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898802/peas_ncepr5.jpg",
     ],
     description: "Sweet green peas, perfect for soups, stews, and rice dishes.",
     specs: { podType: "Green", taste: "Sweet", freshness: "High" },

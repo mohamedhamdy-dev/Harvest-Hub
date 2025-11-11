@@ -2,9 +2,12 @@ export const combinedDairyAndLivestockProducts = [
   {
     id: "animal-01",
     productName: "Fresh Chicken Eggs (30 pcs)",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/egg3.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898808/egg2_x0a0bl.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/egg3.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898808/egg2_x0a0bl.jpg",
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898808/egg3_lxstz7.jpg",
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898806/egg1_zcwxlw.jpg",
     ],
     description:
       "Farm-fresh chicken eggs, unprocessed and packed with nutrition. Ideal for daily meals and baking.",
@@ -41,9 +44,11 @@ export const combinedDairyAndLivestockProducts = [
   {
     id: "animal-02",
     productName: "Raw Cow Milk (1L)",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/milk2.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898808/milk2_unnwon.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/milk2.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898808/milk2_unnwon.jpg",
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898808/milk1_jezzth.jpg",
     ],
     description:
       "Unprocessed cow milk directly sourced from local farms. Rich in nutrients and ideal for boiling or cooking.",
@@ -80,9 +85,10 @@ export const combinedDairyAndLivestockProducts = [
   {
     id: "animal-03",
     productName: "Beef Steak (Boneless)",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/sirloinSteak.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898809/sirloinSteak_m1rz9l.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/sirloinSteak.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898809/sirloinSteak_m1rz9l.jpg",
     ],
     description:
       "Premium boneless beef steak, tender and flavorful. Ideal for grilling or pan-searing.",
@@ -119,9 +125,10 @@ export const combinedDairyAndLivestockProducts = [
   {
     id: "animal-04",
     productName: "Feta Cheese",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/fetaCheese.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898809/fetaCheese_s4z8ko.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/fetaCheese.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898809/fetaCheese_s4z8ko.jpg",
     ],
     description:
       "Creamy and salty feta cheese made from fresh cow's milk. Perfect for salads and sandwiches.",
@@ -158,9 +165,10 @@ export const combinedDairyAndLivestockProducts = [
   {
     id: "animal-05",
     productName: "Natural Honey (Pure)",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/honey.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898808/honey_uwtsmt.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/honey.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898808/honey_uwtsmt.jpg",
     ],
     description:
       "Pure, unfiltered natural honey with a golden hue and rich floral aroma. Great for health and sweetness.",
@@ -197,9 +205,10 @@ export const combinedDairyAndLivestockProducts = [
   {
     id: "animal-06",
     productName: "Free-Range Chicken (Whole)",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/rawChicken.webp`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898809/rawChicken_ymgdba.webp",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/rawChicken.webp`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898809/rawChicken_ymgdba.webp",
     ],
     description:
       "Whole free-range chicken with rich flavor and firm texture. Perfect for roasting or stewing.",
@@ -275,9 +284,10 @@ export const combinedDairyAndLivestockProducts = [
   {
     id: "animal-08",
     productName: "Chicken Thighs",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/chickenThighs.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898806/chickenThighs_jcjrzg.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/chickenThighs.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898806/chickenThighs_jcjrzg.jpg",
     ],
     description:
       "Tender and juicy chicken thighs with skin, great for frying or baking.",
@@ -314,9 +324,10 @@ export const combinedDairyAndLivestockProducts = [
   {
     id: "animal-09",
     productName: "Beef Mince",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/beefMince.webp`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898805/beefMince_z0zjny.webp",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/beefMince.webp`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898805/beefMince_z0zjny.webp",
     ],
     description:
       "Fresh ground beef with perfect fat balance for making burgers, meatballs, or sauces.",
@@ -353,9 +364,10 @@ export const combinedDairyAndLivestockProducts = [
   {
     id: "animal-010",
     productName: "Beef Chuck",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/beefChuck.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898807/beefChuck_htzu8q.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/beefChuck.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898807/beefChuck_htzu8q.jpg",
     ],
     description:
       "Flavorful cut of beef ideal for slow cooking, stews, or shredding for tacos.",
@@ -392,9 +404,10 @@ export const combinedDairyAndLivestockProducts = [
   {
     id: "animal-011",
     productName: "Beef Steak Packed",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/steak1.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898810/steak1_thxhrx.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/steak1.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898810/steak1_thxhrx.jpg",
     ],
     description:
       "Premium quality beef steak slices, vacuum-packed to preserve freshness and flavor.",
@@ -431,9 +444,10 @@ export const combinedDairyAndLivestockProducts = [
   {
     id: "animal-012",
     productName: "Butter",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/butter.jpg`,
+    productImage:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898805/butter_m9fmf2.jpg",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/butter.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898805/butter_m9fmf2.jpg",
     ],
     description:
       "Creamy and rich dairy butter made from natural cow's milk, perfect for cooking and baking.",

@@ -2,11 +2,9 @@ import { NavLink } from "react-router-dom";
 import NestedNavMenu from "./NestedNavMenu";
 import { useSelector } from "react-redux";
 import propTypes from "prop-types";
-import { useTranslation } from "react-i18next";
 
 export default function NavList({ setOpenNav, type }) {
   const { user } = useSelector((state) => state.auth);
-  const { t } = useTranslation("header");
   const role = user?.role;
 
   function handleClose() {
@@ -23,15 +21,12 @@ export default function NavList({ setOpenNav, type }) {
             to="/"
             className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
           >
-            {t("bot.links.home")}
+            home
           </NavLink>
         </li>
         {(role === "merchant" || role === "customer" || role === "admin") && (
           <li>
-            <NestedNavMenu
-              handlerText={t("bot.links.store")}
-              onClose={handleClose}
-            />
+            <NestedNavMenu handlerText="store" onClose={handleClose} />
           </li>
         )}
 
@@ -42,7 +37,7 @@ export default function NavList({ setOpenNav, type }) {
               to="dashboard/products-dashboard"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
-              {t("bot.links.dashboard")}
+              dashboard
             </NavLink>
           </li>
         )}
@@ -54,7 +49,7 @@ export default function NavList({ setOpenNav, type }) {
               to="blog"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
-              {t("bot.links.blog")}
+              blog
             </NavLink>
           </li>
         )}
@@ -66,7 +61,7 @@ export default function NavList({ setOpenNav, type }) {
               to="monitor/field-details"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
-              {t("bot.links.monitor")}
+              monitor
             </NavLink>
           </li>
         )}
@@ -78,7 +73,7 @@ export default function NavList({ setOpenNav, type }) {
               to="auctions/list"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
-              {t("bot.links.auction")}
+              auction
             </NavLink>
           </li>
         )}
@@ -89,7 +84,7 @@ export default function NavList({ setOpenNav, type }) {
               to="control-center/manage-users"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
-              {t("bot.links.controlCenter")}
+              control center
             </NavLink>
           </li>
         )}
@@ -100,7 +95,7 @@ export default function NavList({ setOpenNav, type }) {
               to="manage-products"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
-              {t("bot.links.manageProducts")}
+              manage products
             </NavLink>
           </li>
         )}

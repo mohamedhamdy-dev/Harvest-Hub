@@ -9,14 +9,14 @@ import FooterMobileDropDown from "./FooterMobileDropDown";
 import RenderFooterLinks from "./RenderFooterLinks";
 import RenderContactItems from "./RenderContactItems";
 import { contactInfoVariants } from "../motion/variants";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 ///////////////////////////////
 //    Footer Main Component  //
 ///////////////////////////////
 
 function Footer() {
-  const { t } = useTranslation("footer");
+  // const { t } = useTranslation("footer");
 
   return (
     <footer className="relative bg-[url(/footer/footer.png)] bg-[100%_100%]">
@@ -42,7 +42,11 @@ function Footer() {
                 className="size-40"
               />
 
-              <p className="mt-5 text-white">{t("paragraph")}</p>
+              <p className="mt-5 text-white">
+                Harvest Hub – Connecting farmers with quality equipment,
+                supplies, and resources for a smarter, more sustainable future.
+                🌱
+              </p>
             </div>
 
             <div className="mt-4 lg:hidden">
@@ -68,9 +72,7 @@ function Footer() {
               whileInView="visible"
               className="hidden basis-1/5 lg:block"
             >
-              <h3 className="mb-3 uppercase text-gray-200">
-                {t("heading.title1")}
-              </h3>
+              <h3 className="mb-3 uppercase text-gray-200">information</h3>
               <div>
                 <RenderFooterLinks data={informationData} />
               </div>
@@ -81,9 +83,7 @@ function Footer() {
               whileInView="visible"
               className="hidden basis-1/5 lg:block"
             >
-              <h3 className="mb-3 uppercase text-gray-200">
-                {t("heading.title2")}
-              </h3>
+              <h3 className="mb-3 uppercase text-gray-200">my account</h3>
               <div>
                 <RenderFooterLinks data={myAccountData} />
               </div>
@@ -94,9 +94,7 @@ function Footer() {
               whileInView="visible"
               className="hidden basis-1/4 lg:block"
             >
-              <h3 className="mb-3 uppercase text-gray-200">
-                {t("heading.title3")}
-              </h3>
+              <h3 className="mb-3 uppercase text-gray-200">contact info</h3>
               <div>
                 <RenderContactItems data={myContactData} />
               </div>

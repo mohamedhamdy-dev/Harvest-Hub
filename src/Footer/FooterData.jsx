@@ -2,46 +2,46 @@ import { MapPinIcon, PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
 export const informationData = [
   {
-    title: "informationData.title1",
+    title: "delivery",
     href: "#d",
   },
   {
-    title: "informationData.title2",
+    title: "legal notice",
     href: "#l",
   },
   {
-    title: "informationData.title3",
+    title: "about Us",
     href: "#a",
   },
   {
-    title: "informationData.title4",
+    title: "secure payment",
     href: "#s",
   },
   {
-    title: "informationData.title5",
+    title: "contact us",
     href: "#c",
   },
 ];
 
 export const myAccountData = [
   {
-    title: "myAccountData.title1",
+    title: "person info",
     href: "#d",
   },
   {
-    title: "myAccountData.title2",
+    title: "orders",
     href: "#l",
   },
   {
-    title: "myAccountData.title3",
+    title: "credit slips",
     href: "#a",
   },
   {
-    title: "myAccountData.title4",
+    title: "addresses",
     href: "#s",
   },
   {
-    title: "myAccountData.title5",
+    title: "my wishlists",
     href: "#c",
   },
 ];
@@ -49,14 +49,14 @@ export const myAccountData = [
 export const myContactData = [
   {
     svg: <PhoneIcon className="fill-white" />,
-    text: "myContactData.text1",
+    text: "011-4502-4481, 010-2273-6402",
   },
   {
     svg: <MapPinIcon className="fill-white" />,
-    text: "myContactData.text2",
+    text: "123 Greenfield Avenue, Agri City, Country 45678",
   },
   {
     svg: <EnvelopeIcon className="fill-white" />,
-    text: "myContactData.text3",
+    text: "GP@HelwanUnversity.com",
   },
 ];

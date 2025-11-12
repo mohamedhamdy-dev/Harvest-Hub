@@ -4,28 +4,28 @@ import { BsShop } from "react-icons/bs";
 import { PiGiftBold } from "react-icons/pi";
 import { MdOutlineQueryStats } from "react-icons/md";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
-import { useTranslation } from "react-i18next";
 
 const featurePromoData = [
   {
     svg: <BsShop className="size-7 group-hover:fill-white" />,
-    title: "featurePromo.feature1.title",
-    descryption: "featurePromo.feature1.desc",
+    title: "Marketplace",
+    descryption: "Buy, sell, or rent farming Needs",
   },
   {
     svg: <TfiHeadphoneAlt className="size-7 group-hover:fill-white" />,
-    title: "featurePromo.feature2.title",
-    descryption: "featurePromo.feature2.desc",
+    title: "24/7 Online Support",
+    descryption: "Contact us 24/7",
   },
   {
     svg: <MdOutlineQueryStats className="size-7 group-hover:fill-white" />,
-    title: "featurePromo.feature3.title",
-    descryption: "featurePromo.feature3.desc",
+    title: "Real-Time Insights",
+    descryption:
+      "crop analytics, and market trends for smarter farming decisions.",
   },
   {
     svg: <PiGiftBold className="size-7 group-hover:fill-white" />,
-    title: "featurePromo.feature4.title",
-    descryption: "featurePromo.feature4.desc",
+    title: "Special Gift Cards",
+    descryption: "offer special bonuses with gifts",
   },
 ];
 
@@ -41,7 +41,6 @@ function FeaturePromo() {
 
 export default FeaturePromo;
 function FeaturePromoItem({ data }) {
-  const { t } = useTranslation("home");
   const { svg, title, descryption } = data;
 
   return (
@@ -50,10 +49,10 @@ function FeaturePromoItem({ data }) {
         {svg}
       </div>
       <h3 className="text-xs text-white md:text-sm lg:text-lg xl:text-xl">
-        {t(title)}
+        {title}
       </h3>
       <p className="mt-1 max-w-60 text-balance text-xs text-gray-400 lg:text-sm">
-        {t(descryption)}
+        {descryption}
       </p>
     </div>
   );

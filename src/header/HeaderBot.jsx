@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Collapse, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import NavList from "./bot/NavList";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import { cropAndFreshProducesSearchData } from "../assets2/searchData";
 
 function HeaderBot() {
@@ -12,7 +12,7 @@ function HeaderBot() {
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const navigate = useNavigate();
-  const { t } = useTranslation("header");
+  // const { t } = useTranslation("header");
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -94,14 +94,14 @@ function HeaderBot() {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   onFocus={() => searchTerm && setShowSuggestions(true)}
-                  placeholder={t("bot.search")}
+                  placeholder="Search"
                   className="rounded-l-full bg-gray-100 px-4 py-[10px] text-gray-800 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-apple-500 md:w-64"
                 />
                 <button
                   type="submit"
                   className="rounded-r-full bg-apple-500 p-[10px] uppercase text-white duration-300 hover:bg-black"
                 >
-                  <span className="relative top-[1px]">{t("bot.search")}</span>
+                  <span className="relative top-[1px]">Search</span>
                 </button>
 
                 {showSuggestions && filteredSuggestions.length > 0 && (

@@ -1,11 +1,9 @@
 import { List } from "@material-tailwind/react";
 import { NavLink } from "react-router-dom";
 import propTypes from "prop-types";
-import { useTranslation } from "react-i18next";
 
 export default function CategoryList({ data, onClose }) {
   const { categoryItem, categoryLink, items } = data;
-  const { t } = useTranslation("header");
 
   return (
     <List className="min-w-0 bg-white pt-0 hover:bg-none">
@@ -17,7 +15,7 @@ export default function CategoryList({ data, onClose }) {
             to={categoryLink}
             className="block w-full cursor-pointer rounded-none border-b-2 border-gray-200 p-1 capitalize text-gray-900 hover:bg-white hover:text-green-500"
           >
-            {t(`${categoryItem}`)}
+            {categoryItem}
           </NavLink>
         </li>
         {/* Rest of Items  */}
@@ -28,7 +26,7 @@ export default function CategoryList({ data, onClose }) {
               to={itemLink}
               className="block w-full p-1 text-sm capitalize text-gray-700 hover:bg-white hover:text-apple-500"
             >
-              {t(`${itemTitle}`)}
+              {itemTitle}
             </NavLink>
           </li>
         ))}

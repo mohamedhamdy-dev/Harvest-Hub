@@ -2,14 +2,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import BlogPreviewCard from "./BlogPreviewCard";
-// import { blogPreviewData } from "../assets/BlogStaticData";
 import { H2 } from "../ui/Heading";
-import { useTranslation } from "react-i18next";
-
 import { combinedBlogData } from "../assets2/blogData";
 
 function BlogPreview() {
-  const { t } = useTranslation("home");
   const settings = {
     arrows: false,
 
@@ -42,7 +38,7 @@ function BlogPreview() {
 
   return (
     <div className="container mx-auto px-4 py-14">
-      <H2>{t("headings.fromBlog")}</H2>
+      <H2>From Our Blog</H2>
       <Slider {...settings}>
         {combinedBlogData.slice(4, 7).map((blog) => (
           <BlogPreviewCard data={blog} key={blog.id} />

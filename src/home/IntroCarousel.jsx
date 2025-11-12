@@ -3,61 +3,65 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import propTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-export const introData = [
+const introData = [
   {
-    id: 2,
-    promoTitle: "introCarousel.promo1.title",
+    id: 1,
+    promoTitle: "Farm-Fresh Goodness",
     textPosition: "left",
     overlay: false,
-    promoDesc: "introCarousel.promo1.desc",
+    promoDesc:
+      "Crisp, nutritious veggies, straight from local farms to your table.",
     promoBanner: `${import.meta.env.BASE_URL}banners/banner-22.webp`,
     promoLink: "link2",
   },
   {
-    id: 3,
-    promoTitle: "introCarousel.promo2.title",
+    id: 2,
+    promoTitle: "Nature's Sweetest Bounty",
     textPosition: "left",
     overlay: false,
-    promoDesc: "introCarousel.promo2.desc",
+    promoDesc:
+      "Savor the juiciest, ripest fruits straight from the orchards to your table.",
     promoBanner: `${import.meta.env.BASE_URL}banners/banner-33.webp`,
     promoLink: "link2",
   },
   {
-    id: 4,
-    promoTitle: "introCarousel.promo3.title",
+    id: 3,
+    promoTitle: "Innovate Your Farm",
     textPosition: "center",
     overlay: true,
-    promoDesc: "introCarousel.promo3.desc",
+    promoDesc:
+      "Get the latest farming tools and smart tech to boost productivity and efficiency.",
     promoBanner: `${import.meta.env.BASE_URL}banners/banner-44.jpg`,
     promoLink: "link2",
   },
   {
-    id: 5,
-    promoTitle: "introCarousel.promo4.title",
+    id: 4,
+    promoTitle: "Harvest More, Waste Less",
     textPosition: "center",
     overlay: true,
-    promoDesc: "introCarousel.promo4.desc",
+    promoDesc:
+      "Optimize your yields and reduce waste with our smart agricultural solutions.",
     promoBanner: `${import.meta.env.BASE_URL}banners/banner-55.png`,
     promoLink: "link2",
   },
   {
-    id: 6,
-    promoTitle: "introCarousel.promo5.title",
+    id: 5,
+    promoTitle: "Stronger Farms, Better Harvests",
     textPosition: "left",
     overlay: true,
-    promoDesc: "introCarousel.promo5.desc",
+    promoDesc: "Providing the tools and resources farmers need to thrive.",
     promoBanner: `${import.meta.env.BASE_URL}banners/banner-66.jpg`,
     promoLink: "link2",
   },
   {
-    id: 7,
-    promoTitle: "introCarousel.promo6.title",
+    id: 6,
+    promoTitle: "Farming for the Future",
     textPosition: "left",
     overlay: true,
-    promoDesc: "introCarousel.promo6.desc",
+    promoDesc:
+      "Empowering farmers with sustainable practices for a greener tomorrow.",
     promoBanner: `${import.meta.env.BASE_URL}banners/banner-77.jpg`,
     promoLink: "link2",
   },
@@ -105,8 +109,6 @@ export default function IntroCarousel() {
 }
 
 function IntroItem({ data }) {
-  const { t } = useTranslation("home");
-
   const {
     promoTitle,
     promoDesc,
@@ -125,7 +127,7 @@ function IntroItem({ data }) {
     <article className="relative">
       <img
         src={promoBanner}
-        alt={t(promoTitle)}
+        alt={promoTitle}
         className="min-h-52 w-full md:h-[315px] lg:h-[415px] xl:h-[475px] 2xl:h-[800px]"
       ></img>
 
@@ -135,12 +137,12 @@ function IntroItem({ data }) {
         <p
           className={` ${overlay ? "text-gray-200" : "text-black"} my-1 sm:text-lg md:text-xl lg:mt-3 lg:text-3xl xl:text-4xl 2xl:mt-6 2xl:text-5xl`}
         >
-          {t(promoTitle)}
+          {promoTitle}
         </p>
         <p
           className={`text-[10px] ${overlay ? "text-gray-400" : "text-gray-600"} w-48 text-xs sm:w-72 md:text-base lg:w-96 lg:text-xl xl:w-[480px] xl:text-2xl 2xl:w-auto 2xl:max-w-[700px] 2xl:text-3xl`}
         >
-          {t(promoDesc)}
+          {promoDesc}
         </p>
         <Link
           to={promoLink}

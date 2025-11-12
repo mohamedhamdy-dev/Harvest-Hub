@@ -43,13 +43,13 @@ export default function ProductSpecifications({ data }) {
         <h3 className="mb-5 text-xl capitalize">{productName}</h3>
         <div className="mb-2">
           <div>
-            <Rating value={rating} readonly />
+            <Rating value={Math.trunc(rating)} readonly />
           </div>
           <a className="text-gray-700 hover:text-apple-500">
             {" "}
             {numberOfReviews
               ? `${numberOfReviews} review${numberOfReviews > 1 ? "s" : ""}`
-              : "0 reviews"}{" "}
+              : "0 reviews"}
           </a>
           <a className="text-gray-700 hover:text-apple-500">Write a review</a>
         </div>
@@ -57,7 +57,10 @@ export default function ProductSpecifications({ data }) {
           <span className="text-sm text-gray-800 line-through">{price}</span>
           <div className="flex items-center gap-4">
             <span className="flex items-center justify-center text-2xl text-apple-500">
-              {discountPrice > 0 ? discountPrice : price}
+              {/* {discountPrice > 0 ? discountPrice : price} */}
+              {extractPriceDetails(discountPrice).numberOnly > 0
+                ? extractPriceDetails(discountPrice).numberOnly
+                : extractPriceDetails(price).numberOnly}
             </span>
             <span className="flex h-fit items-center justify-center bg-apple-500 px-1 py-[2px] text-[12px] font-bold text-white">
               Save{" "}

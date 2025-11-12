@@ -4,18 +4,15 @@ import { useState } from "react";
 import ReactPaginate from "react-paginate";
 import ProductCard from "../../shared/ProductCard";
 import { Select, Option } from "@material-tailwind/react";
-
 import { AiOutlineProduct } from "react-icons/ai";
-
 import { useParams } from "react-router-dom";
-import {
-  cropSprayingEquipment,
-  soilCropMonitoring,
-  storageProcessing,
-} from "../../assets/TechProductStaticData";
+
 import { combinedCropAndFreshProducts } from "../../assets2/freshProduces";
 import { combinedDairyAndLivestockProducts } from "../../assets2/dairyLivestock";
 import { combinedSeedAndSaplingProducts } from "../../assets2/seedsSaplings";
+import { soilCropMonitoring } from "../../assets2/soilCropMonitoring";
+import { cropSprayingEquipment } from "../../assets2/cropSprayingEquipment";
+import { storageProcessing } from "../../assets2/storageProcessing";
 
 function fetchData(dataCategory) {
   switch (dataCategory) {

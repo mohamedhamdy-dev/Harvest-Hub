@@ -14,7 +14,6 @@ export default function MerchantProductCard({
 }) {
   const [showEditModal, setShowEditModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
-
   const { id, rating, productImage, productName, discountPrice, price } = data;
 
   return (
@@ -26,7 +25,7 @@ export default function MerchantProductCard({
         <div className="group relative flex flex-col items-center">
           <Link
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            to={`/Harvest-Hub/product-details/${id}`}
+            to={`/product-details/${id}`}
             className={`max-h-[280] max-w-[280px] outline-none ${imgClassName}`}
           >
             <img

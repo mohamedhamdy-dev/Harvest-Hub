@@ -9,7 +9,6 @@ const introData = [
   {
     id: 1,
     promoTitle: "Farm-Fresh Goodness",
-    textPosition: "left",
     overlay: false,
     promoDesc:
       "Crisp, nutritious veggies, straight from local farms to your table.",
@@ -19,50 +18,28 @@ const introData = [
   {
     id: 2,
     promoTitle: "Nature's Sweetest Bounty",
-    textPosition: "left",
     overlay: false,
     promoDesc:
       "Savor the juiciest, ripest fruits straight from the orchards to your table.",
     promoBanner: `${import.meta.env.BASE_URL}banners/banner-33.webp`,
     promoLink: "link2",
   },
+
   {
     id: 3,
-    promoTitle: "Innovate Your Farm",
-    textPosition: "center",
+    promoTitle: "Stronger Farms, Better Harvests",
     overlay: true,
-    promoDesc:
-      "Get the latest farming tools and smart tech to boost productivity and efficiency.",
-    promoBanner: `${import.meta.env.BASE_URL}banners/banner-44.jpg`,
+    promoDesc: "Providing the tools and resources farmers need to thrive.",
+    promoBanner: `${import.meta.env.BASE_URL}banners/banner-66.webp`,
     promoLink: "link2",
   },
   {
     id: 4,
-    promoTitle: "Harvest More, Waste Less",
-    textPosition: "center",
-    overlay: true,
-    promoDesc:
-      "Optimize your yields and reduce waste with our smart agricultural solutions.",
-    promoBanner: `${import.meta.env.BASE_URL}banners/banner-55.png`,
-    promoLink: "link2",
-  },
-  {
-    id: 5,
-    promoTitle: "Stronger Farms, Better Harvests",
-    textPosition: "left",
-    overlay: true,
-    promoDesc: "Providing the tools and resources farmers need to thrive.",
-    promoBanner: `${import.meta.env.BASE_URL}banners/banner-66.jpg`,
-    promoLink: "link2",
-  },
-  {
-    id: 6,
     promoTitle: "Farming for the Future",
-    textPosition: "left",
     overlay: true,
     promoDesc:
       "Empowering farmers with sustainable practices for a greener tomorrow.",
-    promoBanner: `${import.meta.env.BASE_URL}banners/banner-77.jpg`,
+    promoBanner: `${import.meta.env.BASE_URL}banners/banner-77.webp`,
     promoLink: "link2",
   },
 ];
@@ -109,19 +86,10 @@ export default function IntroCarousel() {
 }
 
 function IntroItem({ data }) {
-  const {
-    promoTitle,
-    promoDesc,
-    promoBanner,
-    promoLink,
-    textPosition,
-    overlay,
-  } = data;
+  const { promoTitle, promoDesc, promoBanner, promoLink, overlay } = data;
 
-  const leftText = "left-[5%] top-1/2 z-10 -translate-y-1/2";
-  const centerText =
-    "left-1/2 top-1/2 z-10 -translate-y-1/2 flex flex-col items-center  -translate-x-1/2 text-balance text-center";
-  const overlayText = "bg-black/60 rounded-2xl py-8 px-4";
+  // const overlayText = "bg-black/60 rounded-2xl py-8 px-4";
+  const overlayText = "bg-black/60 rounded-2xl ";
 
   return (
     <article className="relative">
@@ -129,13 +97,15 @@ function IntroItem({ data }) {
         src={promoBanner}
         alt={promoTitle}
         className="min-h-52 w-full md:h-[315px] lg:h-[415px] xl:h-[475px] 2xl:h-[800px]"
-      ></img>
+      />
 
       <div
-        className={`absolute 2xl:w-[800px] ${textPosition === "left" && leftText} ${textPosition === "center" && centerText} ${overlay && overlayText} `}
+        // className={`absolute left-[5%] top-1/2 z-10 -translate-y-1/2 2xl:w-[800px] ${overlay && overlayText} `}
+        className={`absolute left-[5%] top-1/2 z-10 -translate-y-1/2 p-8 2xl:w-[800px] ${overlay && overlayText} `}
       >
         <p
-          className={` ${overlay ? "text-gray-200" : "text-black"} my-1 sm:text-lg md:text-xl lg:mt-3 lg:text-3xl xl:text-4xl 2xl:mt-6 2xl:text-5xl`}
+          // className={` ${overlay ? "text-gray-200" : "text-black"} my-1 sm:text-lg md:text-xl lg:mt-3 lg:text-3xl xl:text-4xl 2xl:mt-6 2xl:text-5xl`}
+          className={` ${overlay ? "text-gray-200" : "text-black"} my-1 sm:text-lg md:text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl`}
         >
           {promoTitle}
         </p>

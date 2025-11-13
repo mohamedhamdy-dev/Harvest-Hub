@@ -5,7 +5,7 @@ export const combinedAuctionData = [
     id: 1,
     title: "Compact Utility Tractor 45HP",
     images: [
-      `${import.meta.env.BASE_URL}products/agriTech/CompactUtilityTractor45HP.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898812/CompactUtilityTractor45HP_k1xeoa.jpg",
     ],
     status: "Live",
     highestBid: "68,000 EGP",
@@ -17,7 +17,7 @@ export const combinedAuctionData = [
     id: 2,
     title: "Diesel Irrigation Pump",
     images: [
-      `${import.meta.env.BASE_URL}products/agriTech/DieselIrrigationPump.webp`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898812/DieselIrrigationPump_hlgfg0.webp",
     ],
     status: "Live",
     highestBid: "9,800 EGP",
@@ -28,7 +28,9 @@ export const combinedAuctionData = [
   {
     id: 3,
     title: "Mini Harvester",
-    images: [`${import.meta.env.BASE_URL}products/agriTech/MiniHarvester.png`],
+    images: [
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898815/MiniHarvester_cjwgec.png",
+    ],
     status: "Live",
     highestBid: "42,500 EGP",
     bids: 18,
@@ -39,7 +41,7 @@ export const combinedAuctionData = [
     id: 4,
     title: "Electric Orchard Sprayer",
     images: [
-      `${import.meta.env.BASE_URL}products/agriTech/ElectricOrchardSprayer.webp`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898813/ElectricOrchardSprayer_yel392.webp",
     ],
     status: "Live",
     highestBid: "3,600 EGP",
@@ -51,7 +53,7 @@ export const combinedAuctionData = [
     id: 5,
     title: "Organic Red Apples (10kg)",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/redApple.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898804/redApple_j5xzzs.jpg",
     ],
     status: "Live",
     highestBid: "230 EGP",
@@ -63,7 +65,7 @@ export const combinedAuctionData = [
     id: 6,
     title: "Premium Potatoes (25kg sack)",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/potato1.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898804/potato2_jadzed.jpg",
     ],
     status: "Live",
     highestBid: "180 EGP",
@@ -75,7 +77,7 @@ export const combinedAuctionData = [
     id: 7,
     title: "Fresh Carrots (10kg)",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/carrot1.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898800/carrot1_a5xu0f.jpg",
     ],
     status: "Live",
     highestBid: "120 EGP",
@@ -87,7 +89,7 @@ export const combinedAuctionData = [
     id: 8,
     title: "Sweet Yellow Corn (100 ears)",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/corn.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898801/corn_xlsjhj.jpg",
     ],
     status: "Live",
     highestBid: "340 EGP",
@@ -99,7 +101,7 @@ export const combinedAuctionData = [
     id: 9,
     title: "Strawberry (15kg box)",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/strawberry.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898804/strawberry_hqfjxv.jpg",
     ],
     status: "Live",
     highestBid: "290 EGP",
@@ -111,7 +113,7 @@ export const combinedAuctionData = [
     id: 10,
     title: "Bananas (8kg)",
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/bananas.jpg`,
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898799/bananas_mdzrmj.jpg",
     ],
     status: "Live",
     highestBid: "360 EGP",

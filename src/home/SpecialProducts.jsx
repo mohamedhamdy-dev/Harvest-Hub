@@ -7,7 +7,7 @@ import { combinedSeedAndSaplingProducts } from "../assets2/seedsSaplings";
 
 function SpecialProducts() {
   return (
-    <section className="py-16">
+    <section className="py-12">
       <div className="container mx-auto px-4">
         <H2>Special Products</H2>
 

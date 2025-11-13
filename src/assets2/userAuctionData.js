@@ -32,7 +32,6 @@ export const userBidsFromApi = userBidsInDB.map((obj) => ({
   ...bidsMap.get(obj.id),
 }));
 
-console.log(userBidsFromApi);
 /////////////////////////////////////////////////////////////////////////
 
 //////////////////////////// on backend code for my auctions ////////////////////////////
@@ -42,7 +41,5 @@ export const myAuctionFromApi = myAuctions.map((obj) => ({
   ...obj,
   ...auctionsMap.get(obj.id),
 }));
-
-console.log(myAuctionFromApi);
 
 /////////////////////////////////////////////////////////////////////////

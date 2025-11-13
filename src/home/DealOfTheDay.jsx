@@ -78,6 +78,7 @@ function DealOfTheDayItem({ data }) {
           className="h-full w-full duration-300 hover:scale-110"
         />
       </Link>
+      {/* <div className="mx-auto flex w-full flex-col gap-2 p-5 xl:p-3 2xl:border-l-[1px] 2xl:border-gray-400 2xl:p-5"> */}
       <div className="mx-auto flex w-full flex-col gap-2 p-5 xl:p-3 2xl:border-l-[1px] 2xl:border-gray-400 2xl:p-5">
         <ItemTimer />
         <p className="line-clamp-1 text-gray-900">{productName}</p>
@@ -96,9 +97,8 @@ function DealOfTheDayItem({ data }) {
         </p>
 
         <Rating value={rating} readonly />
-        <p className="line-clamp-2 max-w-80 xl:line-clamp-2 2xl:line-clamp-3">
-          {description}
-        </p>
+        {/* <p className="line-clamp-2 max-w-80 xl:line-clamp-2 2xl:line-clamp-3"> */}
+        <p className="line-clamp-2 max-w-80 xl:line-clamp-2">{description}</p>
         {/* add to cart & other  */}
         <div className="mt-auto flex justify-start gap-4 border-t-2 border-gray-300 pt-3">
           <div onClick={handleAddToCart}>
@@ -137,46 +137,59 @@ function DealOfTheDayItem({ data }) {
 //////////////////////////////////
 
 function ItemTimer() {
-  const [time, setTime] = useState(5 * 24 * 60 * 60);
+  // Calculate seconds remaining until the next midnight
+  const getSecondsUntilMidnight = () => {
+    const now = new Date();
+    const midnight = new Date();
+    midnight.setHours(24, 0, 0, 0); // next midnight
+    return Math.floor((midnight - now) / 1000);
+  };
+
+  const [time, setTime] = useState(getSecondsUntilMidnight());
+
   useEffect(() => {
-    let timer = setInterval(() => {
-      if (time === 0) clearInterval(timer);
-      setTime(time - 1);
+    const timer = setInterval(() => {
+      setTime((prev) => {
+        if (prev <= 1) {
+          // Reset to a new 24-hour countdown when day changes
+          return getSecondsUntilMidnight();
+        }
+        return prev - 1;
+      });
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [time]);
+  }, []);
+
+  // Convert total seconds into days/hours/mins/secs
+  const hours = Math.floor((time / (60 * 60)) % 24);
+  const minutes = Math.floor((time / 60) % 60);
+  const seconds = time % 60;
 
   return (
     <div className="flex w-fit items-center justify-between gap-1">
-      {/* days */}
-      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900 xl:size-12 2xl:size-14">
+      {/* Hours */}
+      <div className="flex size-14 flex-col items-center justify-center rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900 xl:size-12 2xl:size-14">
         <span className="block text-gray-100">
-          {`${Math.floor(time / (60 * 60 * 24))}`}
-        </span>
-        <span className="block text-xs text-gray-200">Days</span>
-      </div>
-      <span className="relative -top-[3px] text-3xl">:</span>
-      {/* hours */}
-      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900 xl:size-12 2xl:size-14">
-        <span className="block text-gray-100">
-          {`${Math.floor((time / (60 * 60)) % 60)}`}
+          {hours.toString().padStart(2, "0")}
         </span>
         <span className="block text-xs text-gray-200">Hours</span>
       </div>
       <span className="relative -top-[3px] text-3xl">:</span>
-      {/* mins */}
-      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900 xl:size-12 2xl:size-14">
+
+      {/* Minutes */}
+      <div className="flex size-14 flex-col items-center justify-center rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900 xl:size-12 2xl:size-14">
         <span className="block text-gray-100">
-          {`${Math.floor((time / 60) % 60)}`.padStart(2, 0)}
+          {minutes.toString().padStart(2, "0")}
         </span>
         <span className="block text-xs text-gray-200">Mins</span>
       </div>
       <span className="relative -top-[3px] text-3xl">:</span>
-      {/* secs */}
-      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900 xl:size-12 2xl:size-14">
+
+      {/* Seconds */}
+      <div className="flex size-14 flex-col items-center justify-center rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900 xl:size-12 2xl:size-14">
         <span className="block text-gray-100">
-          {`${time % 60}`.padStart(2, 0)}
+          {seconds.toString().padStart(2, "0")}
         </span>
         <span className="block text-xs text-gray-200">Secs</span>
       </div>

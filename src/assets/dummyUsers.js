@@ -2,7 +2,8 @@ export const dummyUsers = [
   {
     uid: "hhBNTxwQXPflpnIsnnZkzDYMInt2",
     name: "Khaled",
-    image: `${import.meta.env.BASE_URL}users/merchant.jpg`,
+    image:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1763035662/merchant_rurppy.jpg",
     phone: "0100-123-4567",
     location: "Giza, Egypt",
     role: "merchant",
@@ -11,7 +12,8 @@ export const dummyUsers = [
   {
     uid: "g2TiT2WmMGfw1FHIqethoD6AT0t1",
     name: "Laila",
-    image: `${import.meta.env.BASE_URL}users/customer.jpg`,
+    image:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1763035663/customer_dckrls.jpg",
     phone: "0100-555-9999",
     location: "Cairo, Egypt",
     role: "customer",
@@ -20,7 +22,8 @@ export const dummyUsers = [
   {
     uid: "iS3jNWLA4uU8vq0FCN5oceKGepj1",
     name: "Mohamed",
-    image: `${import.meta.env.BASE_URL}users/admin.jpg`,
+    image:
+      "https://res.cloudinary.com/dauwvxrrf/image/upload/v1763035662/leou_vbl9er.jpg",
     phone: "0100-888-4444",
     location: "Alexandria, Egypt",
     role: "admin",

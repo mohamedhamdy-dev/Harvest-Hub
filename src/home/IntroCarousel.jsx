@@ -2,45 +2,38 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import propTypes from "prop-types";
-import { Link } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const introData = [
   {
     id: 1,
-    promoTitle: "Farm-Fresh Goodness",
+
+    promoTitle: "Fresh Goodness",
     overlay: false,
-    promoDesc:
-      "Crisp, nutritious veggies, straight from local farms to your table.",
+    promoDesc: "Naturally crisp, farm-fresh vegetables picked just for you.",
     promoBanner: `${import.meta.env.BASE_URL}banners/banner-22.webp`,
-    promoLink: "link2",
   },
   {
     id: 2,
-    promoTitle: "Nature's Sweetest Bounty",
+    promoTitle: "Nature's Sweets",
     overlay: false,
-    promoDesc:
-      "Savor the juiciest, ripest fruits straight from the orchards to your table.",
+    promoDesc: "Enjoy the freshest, juiciest fruits straight from the orchard.",
     promoBanner: `${import.meta.env.BASE_URL}banners/banner-33.webp`,
-    promoLink: "link2",
   },
 
   {
     id: 3,
-    promoTitle: "Stronger Farms, Better Harvests",
+    promoTitle: "Stronger Farms, Better Yields",
     overlay: true,
     promoDesc: "Providing the tools and resources farmers need to thrive.",
     promoBanner: `${import.meta.env.BASE_URL}banners/banner-66.webp`,
-    promoLink: "link2",
   },
   {
     id: 4,
     promoTitle: "Farming for the Future",
     overlay: true,
-    promoDesc:
-      "Empowering farmers with sustainable practices for a greener tomorrow.",
+    promoDesc: "Empowering farmers for a sustainable, greener future.",
     promoBanner: `${import.meta.env.BASE_URL}banners/banner-77.webp`,
-    promoLink: "link2",
   },
 ];
 
@@ -86,40 +79,32 @@ export default function IntroCarousel() {
 }
 
 function IntroItem({ data }) {
-  const { promoTitle, promoDesc, promoBanner, promoLink, overlay } = data;
+  const { promoTitle, promoDesc, promoBanner, overlay } = data;
 
-  // const overlayText = "bg-black/60 rounded-2xl py-8 px-4";
-  const overlayText = "bg-black/60 rounded-2xl ";
+  const overlayText = "bg-black/60 rounded-2xl lg:p-10";
 
   return (
     <article className="relative">
       <img
         src={promoBanner}
         alt={promoTitle}
-        className="min-h-52 w-full md:h-[315px] lg:h-[415px] xl:h-[475px] 2xl:h-[800px]"
+        className="min-h-[250px] w-full md:h-96 lg:h-[30rem] xl:h-[35rem] 2xl:h-[43rem]"
       />
 
       <div
-        // className={`absolute left-[5%] top-1/2 z-10 -translate-y-1/2 2xl:w-[800px] ${overlay && overlayText} `}
-        className={`absolute left-[5%] top-1/2 z-10 -translate-y-1/2 p-8 2xl:w-[800px] ${overlay && overlayText} `}
+        className={`absolute left-1 top-1/2 z-10 -translate-y-1/2 p-4 sm:left-[5%] ${overlay && overlayText} `}
       >
         <p
-          // className={` ${overlay ? "text-gray-200" : "text-black"} my-1 sm:text-lg md:text-xl lg:mt-3 lg:text-3xl xl:text-4xl 2xl:mt-6 2xl:text-5xl`}
-          className={` ${overlay ? "text-gray-200" : "text-black"} my-1 sm:text-lg md:text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl`}
+          className={` ${overlay ? "text-gray-200" : "text-black"} text-lg sm:text-xl md:text-3xl lg:mb-1 lg:text-4xl xl:text-5xl 2xl:mb-2`}
         >
           {promoTitle}
         </p>
+
         <p
-          className={`text-[10px] ${overlay ? "text-gray-400" : "text-gray-600"} w-48 text-xs sm:w-72 md:text-base lg:w-96 lg:text-xl xl:w-[480px] xl:text-2xl 2xl:w-auto 2xl:max-w-[700px] 2xl:text-3xl`}
+          className={`text-xs ${overlay ? "text-gray-400 sm:w-56" : "text-gray-600"} w-48 sm:text-sm md:w-64 md:text-base lg:w-80 lg:text-xl xl:w-[28rem] xl:text-2xl 2xl:w-[36rem] 2xl:text-3xl`}
         >
           {promoDesc}
         </p>
-        <Link
-          to={promoLink}
-          className="mt-2 inline-block cursor-pointer rounded-full bg-apple-500 px-3 py-1 text-sm text-white duration-300 hover:bg-black md:text-base lg:mt-6 2xl:mt-12"
-        >
-          Shop Now
-        </Link>
       </div>
     </article>
   );

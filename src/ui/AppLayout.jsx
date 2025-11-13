@@ -7,7 +7,6 @@ function AppLayout() {
   return (
     <div className="bg-[black]/25">
       <Header />
-      {/* <div className="bg-[url(/bg-texture-1.png)] bg-cover bg-fixed pb-28"> */}
       <div className="bg-[url(/bg-texture-1.webp)] bg-cover bg-fixed pb-28">
         <Outlet />
       </div>
@@ -16,5 +15,6 @@ function AppLayout() {
     </div>
   );
 }
+c;
 
 export default AppLayout;

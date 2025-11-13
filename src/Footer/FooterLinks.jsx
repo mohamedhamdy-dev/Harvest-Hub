@@ -14,6 +14,7 @@ export default function FooterLinks() {
     <motion.ul
       variants={footerIconContainerVariants}
       whileInView="visible"
+      viewport={{ once: true }}
       initial="hidden"
       className="flex"
     >

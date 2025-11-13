@@ -245,9 +245,9 @@ export const combinedDairyAndLivestockProducts = [
   {
     id: "animal-07",
     productName: "Chicken Breasts",
-    productImage: `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/chickenBreasts.jpg`,
+    productImage: `https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898806/chickenBreasts_je6bxt.jpg`,
     images: [
-      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/chickenBreasts.jpg`,
+      `https://res.cloudinary.com/dauwvxrrf/image/upload/v1762898806/chickenBreasts_je6bxt.jpg`,
     ],
     description:
       "Lean, boneless chicken breasts perfect for grilling, roasting, or slicing into strips.",

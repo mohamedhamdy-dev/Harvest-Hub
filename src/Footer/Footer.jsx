@@ -11,9 +11,7 @@ function Footer() {
   return (
     <footer className="relative bg-[url(/footer/footer.jpg)] bg-[100%_100%]">
       <div className="absolute h-full w-full bg-black/45"></div>
-      {/* <div className="container relative mx-auto px-4 lg:py-8"> */}
       <div className="container relative mx-auto px-4 lg:py-4">
-        {/* <div className="relative py-8 lg:py-12"> */}
         <div className="relative py-8">
           <div className="absolute -top-6 left-1/2 size-12 -translate-x-1/2 rounded-full bg-green-800 p-[6px] lg:-top-10">
             <Link to="#">
@@ -62,6 +60,7 @@ function Footer() {
               variants={contactInfoVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="hidden basis-1/5 lg:block"
             >
               <h3 className="mb-3 uppercase text-gray-200">information</h3>
@@ -73,6 +72,7 @@ function Footer() {
               variants={contactInfoVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="hidden basis-1/5 lg:block"
             >
               <h3 className="mb-3 uppercase text-gray-200">my account</h3>
@@ -84,6 +84,7 @@ function Footer() {
               variants={contactInfoVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="hidden basis-1/4 lg:block"
             >
               <h3 className="mb-3 uppercase text-gray-200">contact info</h3>
@@ -94,7 +95,7 @@ function Footer() {
           </div>
         </div>
         <FooterBottom />
-      </div>{" "}
+      </div>
     </footer>
   );
 }

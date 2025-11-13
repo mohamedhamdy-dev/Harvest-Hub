@@ -13,14 +13,13 @@ const featurePromoData = [
   },
   {
     svg: <TfiHeadphoneAlt className="size-7 group-hover:fill-white" />,
-    title: "24/7 Online Support",
-    descryption: "Contact us 24/7",
+    title: "24/7 Support",
+    descryption: "Reach us anytime, day or night.",
   },
   {
     svg: <MdOutlineQueryStats className="size-7 group-hover:fill-white" />,
     title: "Real-Time Insights",
-    descryption:
-      "crop analytics, and market trends for smarter farming decisions.",
+    descryption: "market insights for smarter decisions.",
   },
   {
     svg: <PiGiftBold className="size-7 group-hover:fill-white" />,

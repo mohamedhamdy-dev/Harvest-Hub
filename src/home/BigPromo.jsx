@@ -1,31 +1,27 @@
+import { Link } from "react-router-dom";
+
 function BigPromo() {
   return (
-    <div className="group relative overflow-hidden">
-      <a href="/shop big promo now">
-        <img
-          src={`${import.meta.env.BASE_URL}bigPromo/big-promo-3.jpg`}
-          alt="big promo image"
-          className="w-full duration-700 group-hover:scale-105"
-        />
-      </a>
+    <Link
+      to="/products/agricultural-products"
+      className="group relative overflow-hidden"
+    >
+      <img
+        src={`${import.meta.env.BASE_URL}bigPromo/big-promo-3.jpg`}
+        alt="big promo"
+        className="h-52 w-full duration-700 group-hover:scale-105 sm:h-60 md:h-80 lg:h-96 xl:h-[30rem] 2xl:h-[35rem]"
+      />
+
       {/* text part */}
-      <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-2 text-center lg:gap-4">
-        <h3 className="capitalize text-[#222] sm:text-2xl md:text-3xl 2xl:text-4xl">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center text-center lg:gap-4">
+        <h3 className="md:b capitalize text-[#222] sm:text-lg md:text-2xl lg:text-3xl xl:mb-2 xl:text-4xl">
           Save 20% on Fresh Picks!
         </h3>
-        <p className="hidden text-balance capitalize text-gray-600 sm:block md:text-xl lg:mb-5 lg:text-xl 2xl:text-2xl">
-          Get farm-fresh fruits and veggies at unbeatable prices—limited time
-          only!
+        <p className="text-balance text-xs capitalize text-gray-600 sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+          Fresh farm produce at unbeatable prices — limited time!
         </p>
-
-        <a
-          href="# shop now"
-          className="flex items-center justify-center rounded-full bg-apple-500 px-3 py-2 text-xs uppercase text-white duration-300 hover:bg-black sm:px-4 lg:px-8 lg:py-3"
-        >
-          <span className="relative top-[2px]">shop now</span>
-        </a>
       </div>
-    </div>
+    </Link>
   );
 }
 

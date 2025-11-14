@@ -1,10 +1,8 @@
-import { combinedDairyAndLivestockProducts } from "./dairyLivestock";
-import { combinedCropAndFreshProducts } from "./freshProduces";
+import { extractPriceDetails } from "../utils/helpers";
+import { DairyAndLivestockProducts } from "./dairyLivestock";
+import { CropAndFreshProducts } from "./freshProduces";
 
-const products = [
-  ...combinedCropAndFreshProducts,
-  ...combinedDairyAndLivestockProducts,
-];
+const products = [...CropAndFreshProducts, ...DairyAndLivestockProducts];
 
 // Generate a key based on the current date (1 key per 24 hours)
 function getCurrentDayKey() {
@@ -34,11 +32,10 @@ export function getDealOfTheDayProducts() {
   // Pick two random products (same every day)
   const selected = shuffled.slice(0, 2);
 
-  // Apply 40% discount
   const discounted = selected.map((product) => ({
     ...product,
-    originalPrice: product.price,
-    price: +(product.price * 0.6).toFixed(2),
+
+    discountPrice: `${(extractPriceDetails(product.price).numberOnly * 0.6).toFixed(1)} ${extractPriceDetails(product.price).unit}`,
     discount: "40%",
     isDealOfTheDay: true,
     dealDate: seed,

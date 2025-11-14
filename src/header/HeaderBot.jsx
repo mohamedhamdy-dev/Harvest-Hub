@@ -3,8 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { Collapse, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import NavList from "./bot/NavList";
-// import { useTranslation } from "react-i18next";
-import { cropAndFreshProducesSearchData } from "../assets2/searchData";
+import { CropAndFreshProducts } from "../assets/freshProduces";
+import { DairyAndLivestockProducts } from "../assets/dairyLivestock";
+import { SeedAndSaplingProducts } from "../assets/seedsSaplings";
+// import { cropSprayingEquipment } from "../assets/cropSprayingEquipment";
+// import { soilCropMonitoring } from "../assets/soilCropMonitoring";
+// import { storageProcessing } from "../assets/storageProcessing";
 
 function HeaderBot() {
   const [openNav, setOpenNav] = useState(false);
@@ -12,7 +16,6 @@ function HeaderBot() {
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const navigate = useNavigate();
-  // const { t } = useTranslation("header");
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -27,8 +30,15 @@ function HeaderBot() {
       return;
     }
 
-    const filtered = cropAndFreshProducesSearchData.filter((item) =>
-      item.name.toLowerCase().includes(searchTerm.toLowerCase()),
+    const filtered = [
+      ...CropAndFreshProducts,
+      ...DairyAndLivestockProducts,
+      ...SeedAndSaplingProducts,
+      // ...cropSprayingEquipment,
+      // ...soilCropMonitoring,
+      // ...storageProcessing,
+    ].filter((item) =>
+      item?.productName?.toLowerCase()?.includes(searchTerm?.toLowerCase()),
     );
     setFilteredSuggestions(filtered);
     setShowSuggestions(true);
@@ -113,11 +123,11 @@ function HeaderBot() {
                         className="flex cursor-pointer items-center gap-3 px-4 py-2 text-sm hover:bg-gray-100"
                       >
                         <img
-                          src={item.image}
-                          alt={item.name}
+                          src={item.productImage}
+                          alt={item.productName}
                           className="h-8 w-8 rounded object-cover"
                         />
-                        <span>{item.name}</span>
+                        <span>{item.productName}</span>
                       </li>
                     ))}
                   </ul>

@@ -52,15 +52,30 @@ export function extractNumericValue(priceString) {
 }
 
 export function extractPriceDetails(priceString) {
-  const numberMatch = priceString?.match(/\d+/);
-  const numberWithCurrencyMatch = priceString?.match(/\d+\s*\p{L}+/u);
-  const currencyOnlyMatch = priceString?.match(/\p{L}+/u); // Matches first group of letters (currency)
+  if (!priceString) {
+    return { numberOnly: null, currencyOnly: null, unit: null };
+  }
 
-  return {
-    numberOnly: numberMatch ? parseInt(numberMatch[0], 10) : null,
-    numberWithCurrency: numberWithCurrencyMatch
-      ? numberWithCurrencyMatch[0].replace(/\s+/g, " ")
-      : null,
-    currencyOnly: currencyOnlyMatch ? currencyOnlyMatch[0] : null,
-  };
+  // Match the first number (int or decimal)
+  const numberMatch = priceString.match(/[\d.,]+/);
+
+  const numberOnly = numberMatch
+    ? Number(numberMatch[0].replace(/,/g, ""))
+    : null;
+
+  // Extract full unit (everything after number)
+  let unit = numberMatch
+    ? priceString.slice(numberMatch.index + numberMatch[0].length).trim()
+    : null;
+
+  // Normalize: clean spaces and slashes
+  if (unit) {
+    unit = unit.replace(/\s*\/\s*/g, "/").replace(/\s+/g, "");
+  }
+
+  // Extract currency only (first letters sequence)
+  const currencyMatch = unit ? unit.match(/[A-Za-z]+/) : null;
+  const currencyOnly = currencyMatch ? currencyMatch[0] : null;
+
+  return { numberOnly, currencyOnly, unit };
 }

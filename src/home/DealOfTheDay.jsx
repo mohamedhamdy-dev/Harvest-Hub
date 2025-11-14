@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../slices/cartSlice";
 import { Link } from "react-router-dom";
 import { H2 } from "../ui/Heading";
-import { dealOfTheDayProducts } from "../assets2/dealOfTheDay";
+import { dealOfTheDayProducts } from "../assets/dealOfTheDay";
 
 function DealOfTheDay() {
   const settings = {
@@ -84,20 +84,13 @@ function DealOfTheDayItem({ data }) {
         <p className="line-clamp-1 text-gray-900">{productName}</p>
 
         <p className="text-apple-500 xl:text-base 2xl:text-xl">
-          {Number(discountPrice) !== 0 ? (
-            <>
-              {discountPrice}
-              <span className="ml-1 text-sm text-gray-700 line-through xl:text-base 2xl:text-base">
-                {price}
-              </span>
-            </>
-          ) : (
-            <>{price}</>
-          )}
+          {discountPrice}
+          <span className="ml-1 text-sm text-gray-700 line-through xl:text-base 2xl:text-base">
+            {price}
+          </span>
         </p>
 
         <Rating value={rating} readonly />
-        {/* <p className="line-clamp-2 max-w-80 xl:line-clamp-2 2xl:line-clamp-3"> */}
         <p className="line-clamp-2 max-w-80 xl:line-clamp-2">{description}</p>
         {/* add to cart & other  */}
         <div className="mt-auto flex justify-start gap-4 border-t-2 border-gray-300 pt-3">

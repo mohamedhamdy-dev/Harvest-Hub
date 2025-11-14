@@ -9,15 +9,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ImageUploader } from "../shared/ImageUploader";
 import { AiOutlineProduct } from "react-icons/ai";
-import { combinedCropAndFreshProducts } from "../assets2/freshProduces";
-import { combinedDairyAndLivestockProducts } from "../assets2/dairyLivestock";
-import { combinedSeedAndSaplingProducts } from "../assets2/seedsSaplings";
+import { CropAndFreshProducts } from "../assets/freshProduces";
+import { DairyAndLivestockProducts } from "../assets/dairyLivestock";
+import { SeedAndSaplingProducts } from "../assets/seedsSaplings";
 
 function fetchData(id) {
   return [
-    ...combinedCropAndFreshProducts,
-    ...combinedDairyAndLivestockProducts,
-    ...combinedSeedAndSaplingProducts,
+    ...CropAndFreshProducts,
+    ...DairyAndLivestockProducts,
+    ...SeedAndSaplingProducts,
   ];
 }
 
@@ -131,9 +131,9 @@ function SearchBox({ placeholder = "Search...", onSearch }) {
   const [showSuggestions, setShowSuggestions] = useState(false);
 
   const allProducts = [
-    ...combinedCropAndFreshProducts,
-    ...combinedSeedAndSaplingProducts,
-    ...combinedDairyAndLivestockProducts,
+    ...CropAndFreshProducts,
+    ...SeedAndSaplingProducts,
+    ...DairyAndLivestockProducts,
   ];
 
   useEffect(() => {

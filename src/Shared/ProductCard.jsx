@@ -16,7 +16,7 @@ export default function ProductCard({
   const dispatch = useDispatch();
 
   function handleAddToCart() {
-    dispatch(addItem({ ...data }));
+    dispatch(addItem({ id }));
   }
 
   return (
@@ -32,7 +32,7 @@ export default function ProductCard({
         >
           <img
             src={productImage}
-            alt="product"
+            alt={productName}
             className="duration-300 group-hover:scale-110"
           />
         </Link>

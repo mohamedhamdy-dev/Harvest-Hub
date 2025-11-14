@@ -6,9 +6,13 @@ import { useDispatch } from "react-redux";
 import { extractPriceDetails } from "../utils/helpers";
 
 export default function CartItem({ data }) {
-  const { id, productImage, productName, discountPrice, price, count } = data;
+  const { id, productImage, productName, discountPrice, price, count, specs } =
+    data;
   const dispatch = useDispatch();
 
+  console.log(data);
+
+  console.log(data);
   const discount = extractPriceDetails(discountPrice).numberOnly;
   const orignalPrice = extractPriceDetails(price).numberOnly;
   const finalPrice = discount > 0 ? discount : orignalPrice;
@@ -30,13 +34,13 @@ export default function CartItem({ data }) {
           </div>
           <span className="text-base text-apple-500">{`${discountPrice}`}</span>
         </div>
-        <Specification />
+        <Specification specs={specs} />
       </div>
       <div className="flex items-center justify-center gap-4">
         {/* count */}
         <ItemCounter itemID={id} forCartView={true} />
         {/* total price */}
-        <div className="flex min-w-12 items-center justify-center">{`${(count * finalPrice).toFixed(2).replace(/\.?0+$/, "")}`}</div>
+        <div className="flex min-w-12 items-center justify-center">{`${(count * finalPrice).toFixed(2).replace(/\.?0+$/, "")}/${extractPriceDetails(price).currencyOnly}`}</div>
         {/* delete btn  */}
         <button
           onClick={() => dispatch(removeItem({ id: id }))}
@@ -51,21 +55,30 @@ export default function CartItem({ data }) {
 
 CartItem.propTypes = { data: propTypes.object };
 
-function Specification() {
+function Specification({ specs }) {
   return (
     <div className="flex w-36 flex-col gap-2 py-4 text-sm">
       <h3 className="border-b-[1px] border-gray-300 pb-1 text-base">
         Specification
       </h3>
-      <span>
-        Size: <span>S</span>
-      </span>
-      <span>
-        Color: <span>White</span>
-      </span>
-      <span>
-        Diemension: <span>40x60 cm</span>
-      </span>
+      <ul className="flex max-h-40 flex-col flex-wrap gap-1 text-gray-200">
+        {Object.entries(specs).map(([key, value]) => (
+          <li
+            key={value}
+            className="w-fit text-nowrap py-2 pl-1 text-sm font-medium text-green-700"
+          >
+            <strong className="capitalize">
+              {key
+                .replace(/([a-z])([A-Z])/g, "$1 $2")
+                .replace(/^./, (s) => s.toUpperCase())}
+            </strong>
+            <span className="text-black">
+              {value && value !== true ? ` : ${value}` : ""}
+            </span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
+Specification.propTypes = { specs: propTypes.object };

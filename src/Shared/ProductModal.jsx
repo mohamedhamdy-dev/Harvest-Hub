@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { useCart } from "../slices/cartSlice";
 import { Link } from "react-router-dom";
 import { extractPriceDetails } from "../utils/helpers";
+import VerticalTags from "./VerticalTags";
 
 function ProductModal({ handleOpen, open, itemID }) {
   return (
@@ -91,15 +92,11 @@ function ItemPreview({ handleOpen, itemID }) {
             <span>Total products:</span>
             <span>{totalCartPriceNumber + " " + totalCartPriceCurrency}</span>
           </div>
-          <div className="mb-3 flex justify-between px-1">
-            <span>Total shipping:</span>
-            <span>50 {totalCartPriceCurrency}</span>
-          </div>
+
           <div className="mb-5 flex justify-between bg-gray-200 p-1">
             <span>Total</span>
             <span>
-              {Number(totalCartPriceNumber) + 200} {totalCartPriceCurrency} (tax
-              incl.)
+              {`${(totalCartPriceNumber + 0.14 * totalCartPriceNumber).toFixed(2)} tax incl.`}
             </span>
           </div>
           <div className="flex flex-col items-center gap-2 lg:flex-row">
@@ -128,24 +125,6 @@ function ItemPreview({ handleOpen, itemID }) {
   );
 }
 
-function VerticalTags({ tags }) {
-  return (
-    <div className="flex flex-col items-start space-y-2 rounded-xl border bg-white p-4 shadow-md">
-      {tags?.map((tag, index) => (
-        <span
-          key={index}
-          className="rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700 transition hover:bg-green-200"
-        >
-          {tag}
-        </span>
-      ))}
-    </div>
-  );
-}
-
-VerticalTags.propTypes = {
-  tags: propTypes.array,
-};
 ItemPreview.propTypes = {
   handleOpen: propTypes.func,
   itemID: propTypes.string,

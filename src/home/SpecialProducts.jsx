@@ -1,9 +1,9 @@
 import { H2 } from "../ui/Heading";
 
 import ProductsCarousel from "../shared/ProductsCarousel";
-import { combinedCropAndFreshProducts } from "../assets2/freshProduces";
-import { combinedDairyAndLivestockProducts } from "../assets2/dairyLivestock";
-import { combinedSeedAndSaplingProducts } from "../assets2/seedsSaplings";
+import { CropAndFreshProducts } from "../assets/freshProduces";
+import { DairyAndLivestockProducts } from "../assets/dairyLivestock";
+import { SeedAndSaplingProducts } from "../assets/seedsSaplings";
 
 function SpecialProducts() {
   return (
@@ -13,9 +13,9 @@ function SpecialProducts() {
 
         <ProductsCarousel
           data={[
-            ...combinedCropAndFreshProducts,
-            ...combinedDairyAndLivestockProducts,
-            ...combinedSeedAndSaplingProducts,
+            ...CropAndFreshProducts,
+            ...DairyAndLivestockProducts,
+            ...SeedAndSaplingProducts,
           ]}
         />
       </div>

@@ -52,13 +52,18 @@ const router = createBrowserRouter([
         element: <Account />,
         children: [
           {
-            path: "register",
-            element: <Register />,
+            index: true,
+            element: <SignIn />,
           },
           {
             path: "signin",
             element: <SignIn />,
           },
+          {
+            path: "register",
+            element: <Register />,
+          },
+
           {
             path: "forgot-password",
             element: <ForgotPassword />,

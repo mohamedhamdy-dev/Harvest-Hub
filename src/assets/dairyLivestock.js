@@ -1,4 +1,4 @@
-export const combinedDairyAndLivestockProducts = [
+export const DairyAndLivestockProducts = [
   {
     id: "animal-01",
     productName: "Fresh Chicken Eggs (30 pcs)",

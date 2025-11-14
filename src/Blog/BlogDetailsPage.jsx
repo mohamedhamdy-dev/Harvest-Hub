@@ -8,12 +8,12 @@ import {
   ChatBubbleLeftRightIcon,
   UserIcon,
 } from "@heroicons/react/24/outline";
-import { combinedBlogData } from "../assets2/blogData";
+import { BlogData } from "../assets/blogData";
 
 function BlogView() {
   const { id } = useParams();
 
-  const blog = combinedBlogData.find((b) => Number(b.id) === Number(id));
+  const blog = BlogData.find((b) => Number(b.id) === Number(id));
 
   const [comments, setComments] = useState([
     {

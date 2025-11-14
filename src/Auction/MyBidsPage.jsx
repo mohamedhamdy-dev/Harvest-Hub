@@ -1,6 +1,6 @@
 import ReactPaginate from "react-paginate";
 import { useState } from "react";
-import { userBidsFromApi } from "../assets2/userAuctionData";
+import { userBidsFromApi } from "../assets/userAuctionData";
 import { MyBidCard } from "./MyBidCard";
 
 export default function MyBidsPage() {

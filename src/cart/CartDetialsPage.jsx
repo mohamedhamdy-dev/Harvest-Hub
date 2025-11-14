@@ -5,6 +5,8 @@ import CartItem from "./CartItem";
 export default function CartDetialsPage() {
   const { cart } = useCart();
 
+  console.log(cart);
+
   return (
     <div className="container mx-auto mb-20 lg:h-[800px]">
       <BreadCrumb />
@@ -57,8 +59,7 @@ function ActionAside() {
         <div className="flex justify-between border-b-[1px] border-gray-300 px-3 py-4">
           <span className="text-sm">Total Price (tax incl.)</span>
           <span className="text-lg">
-            {Number(totalCartPriceNumber) + 0.14 * Number(totalCartPriceNumber)}
-            {totalCartPriceNumber > 0 && " " + totalCartPriceCurrency}
+            {`${(totalCartPriceNumber + 0.14 * totalCartPriceNumber).toFixed(2)}`}
           </span>
         </div>
         <form className="py-4">

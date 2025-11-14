@@ -7,30 +7,24 @@ import { useParams } from "react-router-dom";
 
 import { splitCommonPrefix } from "../../utils/helpers";
 
-import { combinedCropAndFreshProducts } from "../../assets2/freshProduces";
-import { combinedDairyAndLivestockProducts } from "../../assets2/dairyLivestock";
-import { combinedSeedAndSaplingProducts } from "../../assets2/seedsSaplings";
-import { cropSprayingEquipment } from "../../assets2/cropSprayingEquipment";
-import { soilCropMonitoring } from "../../assets2/soilCropMonitoring";
-import { storageProcessing } from "../../assets2/storageProcessing";
+import { CropAndFreshProducts } from "../../assets/freshProduces";
+import { DairyAndLivestockProducts } from "../../assets/dairyLivestock";
+import { SeedAndSaplingProducts } from "../../assets/seedsSaplings";
+import { cropSprayingEquipment } from "../../assets/cropSprayingEquipment";
+import { soilCropMonitoring } from "../../assets/soilCropMonitoring";
+import { storageProcessing } from "../../assets/storageProcessing";
 
 function fetchPDPData(id, type = "") {
   const match = id.match(/^[^-]+/);
 
-  // console.log(match);
-
   switch (match[0]) {
     case "fruit":
     case "vege":
-      return combinedCropAndFreshProducts.find((product) => product.id === id);
+      return CropAndFreshProducts.find((product) => product.id === id);
     case "animal":
-      return combinedDairyAndLivestockProducts.find(
-        (product) => product.id === id,
-      );
+      return DairyAndLivestockProducts.find((product) => product.id === id);
     case "seed":
-      return combinedSeedAndSaplingProducts.find(
-        (product) => product.id === id,
-      );
+      return SeedAndSaplingProducts.find((product) => product.id === id);
     case "spray":
       return cropSprayingEquipment?.find((product) => product.id === id);
     case "monitor":
@@ -45,9 +39,6 @@ function fetchPDPData(id, type = "") {
 function ProductDetailsPage() {
   const { id } = useParams();
 
-  // const product = productDetailsData.find((p) => p.id === Number(id));
-
-  // console.log(id);
   const product = fetchPDPData(id);
 
   console.log(product);

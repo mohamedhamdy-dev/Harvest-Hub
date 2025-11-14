@@ -1,4 +1,4 @@
-export const combinedCropAndFreshProducts = [
+export const CropAndFreshProducts = [
   {
     id: "fruit-01",
     productName: "Organic Gala Apples",

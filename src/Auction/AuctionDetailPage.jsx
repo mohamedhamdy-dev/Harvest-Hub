@@ -3,15 +3,13 @@ import { splitCommonPrefix } from "../utils/helpers";
 import { Link, useParams } from "react-router-dom";
 import { TbArrowBackUp } from "react-icons/tb";
 import { AuctionSpecifications } from "./AuctionSpecifications";
-import { combinedAuctionData } from "../assets2/auctionData";
+import { AuctionData } from "../assets/auctionData";
 
 // AuctionDetailPage.jsx
 export default function AuctionDetailPage() {
   const { id } = useParams();
 
-  const auctionDetailsData = combinedAuctionData.find(
-    (p) => p.id === Number(id),
-  );
+  const auctionDetailsData = AuctionData.find((p) => p.id === Number(id));
 
   const images = {
     prefix: splitCommonPrefix(auctionDetailsData.images).prefix,

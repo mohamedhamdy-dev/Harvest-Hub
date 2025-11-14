@@ -25,16 +25,7 @@ export default function ProductSpecifications({ data }) {
   const dispatch = useDispatch();
 
   function handleAddToCart() {
-    dispatch(
-      addItem({
-        id: id,
-        rating: rating,
-        productImage: productImages,
-        productName: productName,
-        discountPrice: discountPrice,
-        originalPrice: price,
-      }),
-    );
+    dispatch(addItem({ id }));
   }
 
   return (

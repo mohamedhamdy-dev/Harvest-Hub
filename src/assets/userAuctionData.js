@@ -1,4 +1,4 @@
-import { combinedAuctionData } from "./auctionData";
+import { AuctionData } from "./auctionData";
 
 const myAuctions = [{ id: 1 }, { id: 2 }];
 
@@ -26,7 +26,7 @@ export const userBidsInDB = [
 ];
 
 //////////////////////////// on backend code for bids ///////////////////////////////////
-const bidsMap = new Map(combinedAuctionData.map((obj) => [obj.id, obj]));
+const bidsMap = new Map(AuctionData.map((obj) => [obj.id, obj]));
 export const userBidsFromApi = userBidsInDB.map((obj) => ({
   ...obj,
   ...bidsMap.get(obj.id),
@@ -36,7 +36,7 @@ export const userBidsFromApi = userBidsInDB.map((obj) => ({
 
 //////////////////////////// on backend code for my auctions ////////////////////////////
 
-const auctionsMap = new Map(combinedAuctionData.map((obj) => [obj.id, obj]));
+const auctionsMap = new Map(AuctionData.map((obj) => [obj.id, obj]));
 export const myAuctionFromApi = myAuctions.map((obj) => ({
   ...obj,
   ...auctionsMap.get(obj.id),

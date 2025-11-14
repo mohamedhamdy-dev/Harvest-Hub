@@ -1,6 +1,6 @@
 ////////////////////////////  i will inject the startTime and endTime in this data
 
-export const combinedAuctionData = [
+export const AuctionData = [
   {
     id: 1,
     title: "Compact Utility Tractor 45HP",

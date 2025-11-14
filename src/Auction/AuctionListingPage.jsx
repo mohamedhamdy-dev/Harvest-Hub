@@ -2,15 +2,15 @@
 import ReactPaginate from "react-paginate";
 import { useState } from "react";
 import { getActiveAuctions } from "../utils/helpers";
-import { combinedAuctionData } from "../assets2/auctionData";
+import { AuctionData } from "../assets/auctionData";
 import AuctionCard from "./AuctionCard";
 
 export default function AuctionListingsPage() {
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 3;
 
-  // const LiveAuctionsData = getActiveAuctions(combinedAuctionData);
-  const LiveAuctionsData = combinedAuctionData;
+  // const LiveAuctionsData = getActiveAuctions(AuctionData);
+  const LiveAuctionsData = AuctionData;
 
   const endOffset = itemOffset + itemsPerPage;
 

@@ -8,23 +8,27 @@ const CategoryCarouselArray = [
     id: 1,
     image: `${import.meta.env.BASE_URL}thumbs/produces.png`,
     text: "Fruit & Veges",
+    link: "/products/crop-fresh-produce",
   },
 
   {
     id: 2,
     image: `${import.meta.env.BASE_URL}thumbs/livestock.png`,
     text: "Dairy & Livestock",
+    link: "/products/dairy-and-livestock",
   },
   {
     id: 3,
     image: `${import.meta.env.BASE_URL}thumbs/farmTech.png`,
     text: "Farm Technology",
+    link: "/products/farming-technology",
   },
 
   {
     id: 4,
     image: `${import.meta.env.BASE_URL}thumbs/seedsSaplings.png`,
     text: "Seeds & Saplings",
+    link: "/products/seeds-and-saplings",
   },
 ];
 
@@ -41,7 +45,7 @@ export default function CategoryCarousel() {
 function CategoryItem({ data }) {
   return (
     <Link
-      to={`#${data.text}`}
+      to={`${data.link}`}
       className="group mx-auto block max-w-44 text-center text-xs"
     >
       <div className="mx-auto mb-2 size-28 cursor-pointer overflow-hidden rounded-full border-2 border-mercury-200 bg-white duration-700 group-hover:border-b-orange-500 group-hover:border-l-apple-500 group-hover:border-r-orange-500 group-hover:border-t-apple-500 group-hover:[transform:rotateY(180deg)] sm:size-32 lg:size-36">

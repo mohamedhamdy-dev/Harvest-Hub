@@ -7,7 +7,7 @@ import {
   MenuHandler,
 } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import { combinedBlogData } from "../assets2/blogData";
+import { BlogData } from "../assets/blogData";
 import { Link } from "react-router-dom";
 
 export default function BlogAside() {
@@ -15,21 +15,21 @@ export default function BlogAside() {
     <>
       <div className="hidden basis-1/4 flex-col gap-4 xl:flex 2xl:basis-1/5">
         <BlogAsideSection
-          data={combinedBlogData.slice(5, 7)}
+          data={BlogData.slice(5, 7)}
           sectionTitle="Popular Articles"
         />
         <BlogAsideSection
-          data={combinedBlogData.slice(1, 3)}
+          data={BlogData.slice(1, 3)}
           sectionTitle="Recent Articles"
         />
       </div>
       <div className="flex flex-col gap-4 xl:hidden">
         <BlogAsideSection
-          data={combinedBlogData.slice(0, 2)}
+          data={BlogData.slice(0, 2)}
           sectionTitle="Popular Articles"
         />
         <BlogAsideSection
-          data={combinedBlogData.slice(3, 5)}
+          data={BlogData.slice(3, 5)}
           sectionTitle="Recent Articles"
         />
       </div>

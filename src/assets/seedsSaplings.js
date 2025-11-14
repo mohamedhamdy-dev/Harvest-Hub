@@ -1,4 +1,4 @@
-export const combinedSeedAndSaplingProducts = [
+export const SeedAndSaplingProducts = [
   {
     id: "seed-01",
     productName: "Burpee Sweet Pepper Seeds",

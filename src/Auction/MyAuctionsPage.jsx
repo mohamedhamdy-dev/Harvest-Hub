@@ -1,5 +1,5 @@
 import ReactPaginate from "react-paginate";
-import { myAuctionFromApi } from "../assets2/userAuctionData";
+import { myAuctionFromApi } from "../assets/userAuctionData";
 import MyAuctionCard from "./MyAuctionCard";
 import { useState } from "react";
 

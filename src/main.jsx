@@ -5,7 +5,7 @@ import "./index.css";
 import { ThemeProvider } from "@material-tailwind/react";
 import store from "./store.js";
 import { Provider } from "react-redux";
-import "./assets2/userAuctionData.js";
+import "./assets/dealOfTheDay.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

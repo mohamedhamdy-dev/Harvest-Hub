@@ -1,4 +1,4 @@
-export const combinedBlogData = [
+export const BlogData = [
   {
     id: 1,
     blogImage:

@@ -7,39 +7,39 @@ import { Select, Option } from "@material-tailwind/react";
 import { AiOutlineProduct } from "react-icons/ai";
 import { useParams } from "react-router-dom";
 
-import { combinedCropAndFreshProducts } from "../../assets2/freshProduces";
-import { combinedDairyAndLivestockProducts } from "../../assets2/dairyLivestock";
-import { combinedSeedAndSaplingProducts } from "../../assets2/seedsSaplings";
-import { soilCropMonitoring } from "../../assets2/soilCropMonitoring";
-import { cropSprayingEquipment } from "../../assets2/cropSprayingEquipment";
-import { storageProcessing } from "../../assets2/storageProcessing";
+import { CropAndFreshProducts } from "../../assets/freshProduces";
+import { DairyAndLivestockProducts } from "../../assets/dairyLivestock";
+import { SeedAndSaplingProducts } from "../../assets/seedsSaplings";
+import { soilCropMonitoring } from "../../assets/soilCropMonitoring";
+import { cropSprayingEquipment } from "../../assets/cropSprayingEquipment";
+import { storageProcessing } from "../../assets/storageProcessing";
 
 function fetchData(dataCategory) {
   switch (dataCategory) {
-    case "agricultural-products":
-      return [
-        ...combinedCropAndFreshProducts,
-        ...combinedDairyAndLivestockProducts,
-        ...combinedSeedAndSaplingProducts,
-      ];
     case "crop-fresh-produce":
-      return combinedCropAndFreshProducts;
+      return CropAndFreshProducts;
     case "seeds-and-saplings":
-      return combinedSeedAndSaplingProducts;
+      return SeedAndSaplingProducts;
     case "dairy-and-livestock":
-      return combinedDairyAndLivestockProducts;
-    case "allTech":
-      return [
-        ...soilCropMonitoring,
-        ...cropSprayingEquipment,
-        ...storageProcessing,
-      ];
+      return DairyAndLivestockProducts;
     case "soil-and-crop-monitoring":
       return soilCropMonitoring;
     case "crop-spraying-equipment":
       return cropSprayingEquipment;
     case "storage-and-processing ":
       return storageProcessing;
+    case "agricultural-products":
+      return [
+        ...CropAndFreshProducts,
+        ...DairyAndLivestockProducts,
+        ...SeedAndSaplingProducts,
+      ];
+    case "farming-technology":
+      return [
+        ...soilCropMonitoring,
+        ...cropSprayingEquipment,
+        ...storageProcessing,
+      ];
   }
 }
 

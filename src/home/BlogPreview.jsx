@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import BlogPreviewCard from "./BlogPreviewCard";
 import { H2 } from "../ui/Heading";
-import { combinedBlogData } from "../assets2/blogData";
+import { BlogData } from "../assets/blogData";
 
 function BlogPreview() {
   const settings = {
@@ -40,7 +40,7 @@ function BlogPreview() {
     <div className="container mx-auto px-4 py-14">
       <H2>From Our Blog</H2>
       <Slider {...settings}>
-        {combinedBlogData.slice(4, 7).map((blog) => (
+        {BlogData.slice(4, 7).map((blog) => (
           <BlogPreviewCard data={blog} key={blog.id} />
         ))}
       </Slider>
